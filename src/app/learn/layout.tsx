@@ -13,6 +13,8 @@ const mathJaxConfig = {
   },
 };
 
+export { mathJaxConfig };
+
 export default function Learn({ children }: { children: React.ReactNode }) {
   const pathname: string = usePathname();
 
