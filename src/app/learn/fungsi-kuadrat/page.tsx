@@ -1,3 +1,6 @@
+"use client"
+
+import { MathJax } from "better-react-mathjax";
 import Breadcrumbs from "../breadcrumbs";
 
 export default function FungsiKuadrat() {
@@ -8,7 +11,7 @@ export default function FungsiKuadrat() {
       <h2 className="text-3xl font-semibold mb-2 text-white">Pengertian</h2>
       <p className="mb-2">Fungsi kuadrat adalah fungsi polinomial dengan pangkat tertinggi dari variabelnya adalah dua. Bentuk umum dari fungsi kuadrat adalah:</p>
       <div className="mb-2 font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
-        <span className="text-green-400">f(x)</span> = ax^2 + bx + c
+        <MathJax>{"$$f(x) = ax^2 + bx + c$$"}</MathJax>
       </div>
       <p className="mb-2">di mana:</p>
       <ul className="list-disc ms-10 mb-4">

@@ -1,3 +1,6 @@
+"use client"
+
+import { MathJax } from "better-react-mathjax";
 import Breadcrumbs from "../../breadcrumbs";
 
 export default function GrafikFungsiKuadrat() {
@@ -11,7 +14,7 @@ export default function GrafikFungsiKuadrat() {
         <li>
           <p className="mb-2">Sumbu Simetri: Grafik fungsi kuadrat simetris terhadap garis vertikal yang melalui titik puncak parabola. Sumbu simetri dapat ditemukan dengan rumus:</p>
           <div className="mb-2 font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
-            <span className="text-green-400">x</span> = -b/2a
+            <MathJax>{"x = -\\frac{b}{2a}"}</MathJax>
           </div>
         </li>
         <li>

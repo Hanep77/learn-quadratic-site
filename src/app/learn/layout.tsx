@@ -3,6 +3,15 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import { MathJaxContext } from "better-react-mathjax";
+
+const mathJaxConfig = {
+  loader: { load: ["[tex]/color"] },
+  tex: {
+    inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+  },
+};
 
 export default function Learn({ children }: { children: React.ReactNode }) {
   const pathname: string = usePathname();
@@ -36,7 +45,9 @@ export default function Learn({ children }: { children: React.ReactNode }) {
         </aside>
         <div className="flex-grow">
           <div className="w-full leading-7 font-light text-lg text-violet-400 pb-16">
-            {children}
+            <MathJaxContext config={mathJaxConfig}>
+              {children}
+            </MathJaxContext>
           </div>
         </div>
       </div>
