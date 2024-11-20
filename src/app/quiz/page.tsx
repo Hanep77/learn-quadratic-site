@@ -26,11 +26,11 @@ type UserAnswer = {
 export default function Quiz() {
   const [data, setData] = useState<Question[]>([]);
   const [isDone, setIsDone] = useState<boolean>(() => {
-    const isDone = localStorage.getItem("is-done");
-    return isDone == "true" ? true : false
+    const isDone: string | null = typeof window !== "undefined" ? window.localStorage.getItem("is-done") : null;
+    return isDone ? true : false
   });
   const [userAnswers, setUserAnswers] = useState<Array<UserAnswer>>(() => {
-    const answers = localStorage.getItem("user-answers")
+    const answers = typeof window !== "undefined" ? window.localStorage.getItem("user-answers") : null;
     return answers ? JSON.parse(answers) : []
   });
 
