@@ -110,7 +110,7 @@ export default function Quiz() {
 
             return (
               <div key={question.no} className="border border-violet-700 p-4 mb-4">
-                <p><span>{question.no}. </span>{filteredQuestion[0]} <span className="inline-block"><MathJax>{`$$ ${filteredQuestion[1]} $$`}</MathJax></span> {filteredQuestion[2]}</p>
+                <p className="mb-2"><span>{question.no}. </span>{filteredQuestion[0]}<MathJax inline>{`$ ${filteredQuestion[1]} $`}</MathJax> {filteredQuestion[2]}</p>
                 <div className="grid grid-cols-2 gap-2">
                   {question.option.map((opt, i) => {
                     const answerIndex = userAnswer?.answerIndex;
