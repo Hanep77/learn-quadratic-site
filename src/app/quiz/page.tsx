@@ -74,7 +74,7 @@ export default function Quiz() {
           <div className="max-w-screen-lg m-auto">
             {data.map(question => {
               const filteredQuestion: string[] = question.question.split("|");
-              const userAnswer = userAnswers.find(answer => question.no == answer.no)
+              const userAnswer: UserAnswer | undefined = userAnswers.find(answer => question.no == answer.no)
 
               return (
                 <div key={question.no} className={`border ${userAnswer?.isCorrect ? "bg-green-900 border-green-800" : "bg-red-900 border-red-700"} bg-opacity-30 p-4 mb-4`}>
@@ -105,7 +105,7 @@ export default function Quiz() {
       <MathJaxContext config={mathJaxConfig}>
         <div className="max-w-screen-lg m-auto">
           {data.map(question => {
-            const filteredQuestion: any = question.question.split("|");
+            const filteredQuestion: string[] = question.question.split("|");
             const userAnswer: UserAnswer | undefined = userAnswers.find(answer => question.no == answer.no)
 
             return (
