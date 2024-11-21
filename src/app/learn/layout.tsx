@@ -46,7 +46,7 @@ export default function Learn({ children }: { children: React.ReactNode }) {
           </div>
         </aside>
         <div className="flex-grow">
-          <div className="w-full leading-7 font-light text-lg text-violet-400 pb-16">
+          <div className="w-full leading-7 text-lg text-violet-300 pb-16">
             <MathJaxContext config={mathJaxConfig}>
               {children}
             </MathJaxContext>
