@@ -26,7 +26,7 @@ export default function Learn({ children }: { children: React.ReactNode }) {
             <h6 className="font-medium mb-2">Pengantar</h6>
             <ul className="text-violet-400 font-light">
               <li className={`border-s ${pathname == "/learn" ? "text-white font-normal" : "border-violet-700"} ps-4 py-1`}><Link href={'/learn'}>Pendahuluan</Link></li>
-              <li className={`border-s ${pathname == "/learn/pengantar/prerequisit" ? "text-white font-normal" : "border-violet-700"} ps-4 py-1`}><Link href={'/learn/pengantar/prerequisit'}>Prerequisit</Link></li>
+              <li className={`border-s ${pathname == "/learn/pengantar/prerequisit" ? "text-white font-normal" : "border-violet-700"} ps-4 py-1`}><Link href={'/learn/pengantar/prerequisit'}>Pre-requisites</Link></li>
             </ul>
           </div>
           <div>
