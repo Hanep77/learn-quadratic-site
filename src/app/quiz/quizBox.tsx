@@ -1,7 +1,7 @@
 import { MathJax } from "better-react-mathjax"
 import { Question } from "./type"
 
-export default function QuizBox({ storeAnswer, nextQuestion, currentQuestion }: { storeAnswer: Function, nextQuestion: () => void, currentQuestion: Question | null }) {
+export default function QuizBox({ storeAnswer, nextQuestion, currentQuestion }: { storeAnswer: (no?: number, userAnswer?: number) => void, nextQuestion: () => void, currentQuestion: Question | null }) {
   const filteredQuestion = currentQuestion!.question!.split('|')
   return (
     <div className="flex flex-col md:flex-row max-w-screen-md m-auto p-4 rounded bg-violet-700 bg-opacity-30 gap-5">
