@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { evaluate } from "mathjs";
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { mathJaxConfig } from "../learn/layout";
+import '../globals.css';
 
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
@@ -64,64 +65,67 @@ export default function Calculator() {
   return (
     <>
       <MathJaxContext config={mathJaxConfig}>
-        <div className="flex flex-row justify-between bg-[rgba(28,3,50,1)] pt-20 px-12 min-h-screen max-w-screen">
-          <div>
-            <h2 className="text-2xl font-semibold mb-4 text-green-500">Quadratic Function Calculator</h2>
-            <div className="inputs mb-4 flex flex-col items-start space-y-4">
-              <div className="ml-7 mb-2 font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
-                <MathJax inline>
-                  {`$ f(x) = ${coefficients.a == 1 ? "" : coefficients.a == -1? "-" : coefficients.a }x^2 ${coefficients.b >= 0 ? "+" : ""} ${coefficients.b == 1 ? "": coefficients.b == -1 ? "-" : coefficients.b}x ${coefficients.c >= 0 ? "+" : ""} ${coefficients.c} $`}
-                </MathJax>
+        <div className="flex flex-row justify-between bg-[rgba(28,3,50,1)] pt-20 pb-4 min-h-screen max-w-screen">
+          <div className="max-w-screen-lg m-auto flex flex-col gap-2 items-center">
+            <div className="w-80 sm:w-[500px] md:w-full p-4 bg-violet-700 bg-opacity-30 rounded">
+              <div className="inputs flex flex-col items-center gap-4">
+                <div className="rounded flex-grow">
+                  <Plot
+                    data={graphData}
+                    layout={{
+                      title: "Quadratic Function Graph",
+                      xaxis: { title: "x" },
+                      yaxis: { title: "f(x)" },
+                    }}
+                    className="w-80 sm:w-[500px] md:w-full rounded overflow-hidden"
+                  />
+                </div>
+                <div className="font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
+                  <MathJax inline>
+                    {`$ f(x) = ${coefficients.a == 1 ? "" : coefficients.a == -1 ? "-" : coefficients.a}x^2 ${coefficients.b >= 0 ? "+" : ""} ${coefficients.b == 1 ? "" : coefficients.b == -1 ? "-" : coefficients.b}x ${coefficients.c >= 0 ? "+" : ""} ${coefficients.c} $`}
+                  </MathJax>
+                </div>
+                <div className="flex gap-2 bg-violet-700 bg-opacity-30 py-2 gap rounded">
+                  <label className="flex items-center">
+                    <span className="mr-2"><MathJax inline>{"$ a: $"}</MathJax></span>
+                    <input
+                      type="number"
+                      name="a"
+                      value={coefficients.a}
+                      onChange={handleChange}
+                      className="w-16 border p-1 rounded text-black"
+                    />
+                  </label>
+                  <label className="flex items-center">
+                    <span className="mr-2"><MathJax inline>{"$ b: $"}</MathJax></span>
+                    <input
+                      type="number"
+                      name="b"
+                      value={coefficients.b}
+                      onChange={handleChange}
+                      className="w-16 border p-1 rounded text-black"
+                    />
+                  </label>
+                  <label className="flex items-center">
+                    <span className="mr-2"><MathJax inline>{"$ c: $"}</MathJax></span>
+                    <input
+                      type="number"
+                      name="c"
+                      value={coefficients.c}
+                      onChange={handleChange}
+                      className="w-16 border p-1 rounded text-black"
+                    />
+                  </label>
+                </div>
+                <button
+                  onClick={generateGraphData}
+                  className="bg-green-500 text-white px-3 py-2 rounded cursor-pointer z-10"
+                >
+                  Generate Graph
+                </button>
               </div>
-              <label className="flex items-center">
-                <span className="mr-2"><MathJax inline>{"$ a: $"}</MathJax></span>
-                <input
-                  type="number"
-                  name="a"
-                  defaultValue={coefficients.a}
-                  onChange={handleChange}
-                  className="border p-1 rounded text-black"
-                />
-              </label>
-              <label className="flex items-center">
-                <span className="mr-2"><MathJax inline>{"$ b: $"}</MathJax></span>
-                <input
-                  type="number"
-                  name="b"
-                  defaultValue={coefficients.b}
-                  onChange={handleChange}
-                  className="border p-1 rounded text-black"
-                />
-              </label>
-              <label className="flex items-center">
-                <span className="mr-2"><MathJax inline>{"$ c: $"}</MathJax></span>
-                <input
-                  type="number"
-                  name="c"
-                  defaultValue={coefficients.c}
-                  onChange={handleChange}
-                  className="border p-1 rounded text-black"
-                />
-              </label>
-              <button
-                onClick={generateGraphData}
-                className="ml-6 bg-green-500 text-white px-3 py-1 rounded cursor-pointer z-10"
-              >
-                Generate Graph
-              </button>
             </div>
-          </div>
-
-          <div>
-            <Plot
-              data={graphData}
-              layout={{
-                title: "Quadratic Function Graph",
-                xaxis: { title: "x" },
-                yaxis: { title: "f(x)" },
-              }}
-              style={{ width: "100%", height: "85vh" }}
-            />
+            {/**/}
           </div>
         </div>
       </MathJaxContext>
