@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { MathJaxContext } from "better-react-mathjax";
 
 export default function Learn({ children }: { children: React.ReactNode }) {
   const pathname: string = usePathname();
