@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { evaluate } from "mathjs";
-import { MathJax } from "better-react-mathjax";
 import '../globals.css';
 
+const MathJax = dynamic(() => import("better-react-mathjax").then(mod => mod.MathJax), { ssr: false });
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
 type GraphData = {
