@@ -79,8 +79,8 @@ export default function Calculator() {
                 />
               </div>
               <div className="font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
-                <MathJax inline>
-                  {`$ f(x) = ${coefficients.a == 1 ? "" : coefficients.a == -1 ? "-" : coefficients.a}x^2 ${coefficients.b >= 0 ? "+" : ""} ${coefficients.b == 1 ? "" : coefficients.b == -1 ? "-" : coefficients.b}x ${coefficients.c >= 0 ? "+" : ""} ${coefficients.c} $`}
+                <MathJax>
+                  {`$$ f(x) = ${coefficients.a == 1 ? "" : coefficients.a == -1 ? "-" : coefficients.a}x^2 ${coefficients.b >= 0 ? "+" : ""} ${coefficients.b == 1 ? "" : coefficients.b == -1 ? "-" : coefficients.b}x ${coefficients.c >= 0 ? "+" : ""} ${coefficients.c} $$`}
                 </MathJax>
               </div>
               <div className="flex gap-2 bg-violet-700 bg-opacity-30 py-2 gap rounded">
