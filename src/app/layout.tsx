@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./navbar";
 import { MathJaxContext } from "better-react-mathjax";
+import { useEffect, useState } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,13 +30,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-white`}>
         <Navbar />
-        <MathJaxContext config={mathJaxConfig}>
-          {children}
-        </MathJaxContext>
+        {isClient && (
+          <MathJaxContext config={mathJaxConfig}>
+            {children}
+          </MathJaxContext>
+        )}
+        {!isClient && children} {}
       </body>
     </html>
   );
