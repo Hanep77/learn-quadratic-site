@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 const mathJaxConfig = {
-  loader: { load: ["[tex]/color"] },
+  loader: { load: ["[tex]/color", "input/asciimath", "output/chtml"] },
   tex: {
     inlineMath: [["$", "$"], ["\\(", "\\)"]],
     displayMath: [["$$", "$$"], ["\\[", "\\]"]],
