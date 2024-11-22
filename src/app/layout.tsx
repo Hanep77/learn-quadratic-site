@@ -3,12 +3,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./navbar";
-import dynamic from "next/dynamic";
-
-const MathJaxContext = dynamic(
-  () => import("better-react-mathjax").then((mod) => mod.MathJaxContext),
-  { ssr: false }
-);
+import { MathJaxContext } from "better-react-mathjax";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
