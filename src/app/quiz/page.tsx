@@ -1,7 +1,5 @@
 "use client"
 
-import { MathJaxContext } from "better-react-mathjax";
-import { mathJaxConfig } from "../learn/layout";
 import { useEffect, useState } from "react";
 import { Question } from "./type";
 import QuizBox from "./quizBox";
@@ -77,12 +75,10 @@ export default function Quiz() {
 
   return data.length == 0 ? <Loading /> : (
     <div className="flex justify-center items-center bg-[rgba(28,3,50,1)] min-h-screen max-w-screen">
-      <MathJaxContext config={mathJaxConfig}>
-        <div className="px-4 md:px-0">
-          <h4 className="font-medium mb-2 text-center">{data[currentQuestion].no}/10</h4>
-          <QuizBox currentQuestion={data[currentQuestion]} nextQuestion={nextQuestion} storeAnswer={storeAnswer} />
-        </div>
-      </MathJaxContext >
+      <div className="px-4 md:px-0">
+        <h4 className="font-medium mb-2 text-center">{data[currentQuestion].no}/10</h4>
+        <QuizBox currentQuestion={data[currentQuestion]} nextQuestion={nextQuestion} storeAnswer={storeAnswer} />
+      </div>
     </div>
   );
 }
