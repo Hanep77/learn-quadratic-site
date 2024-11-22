@@ -3,7 +3,12 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./navbar";
-import { MathJaxContext } from "better-react-mathjax";
+import dynamic from "next/dynamic";
+
+const MathJaxContext = dynamic(
+  () => import("better-react-mathjax").then((mod) => mod.MathJaxContext),
+  { ssr: false }
+);
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,7 +22,7 @@ const geistMono = localFont({
 });
 
 const mathJaxConfig = {
-  loader: { load: ["[tex]/color", "input/asciimath", "output/chtml"] },
+  loader: { load: ["[tex]/color"] },
   tex: {
     inlineMath: [["$", "$"], ["\\(", "\\)"]],
     displayMath: [["$$", "$$"], ["\\[", "\\]"]],
