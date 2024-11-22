@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import localFont from "next/font/local";
 import "./globals.css";
@@ -26,9 +26,9 @@ const mathJaxConfig = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-white`}>

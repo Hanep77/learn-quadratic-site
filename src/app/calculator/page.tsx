@@ -5,8 +5,14 @@ import dynamic from "next/dynamic";
 import { evaluate } from "mathjs";
 import '../globals.css';
 
-const MathJax = dynamic(() => import("better-react-mathjax").then(mod => mod.MathJax), { ssr: false });
-const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
+const MathJax = dynamic(() => import("better-react-mathjax").then(mod => mod.MathJax), {
+  ssr: false,
+  loading: () => <span>Loading Math...</span>,
+});
+const Plot = dynamic(() => import("react-plotly.js"), {
+  ssr: false,
+  loading: () => <div>Loading Graph...</div>,
+});
 
 type GraphData = {
   x: number[];
@@ -79,7 +85,7 @@ export default function Calculator() {
                 />
               </div>
               <div className="font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
-                <MathJax>
+                <MathJax dynamic>
                   {`$$ f(x) = ${coefficients.a == 1 ? "" : coefficients.a == -1 ? "-" : coefficients.a}x^2 ${coefficients.b >= 0 ? "+" : ""} ${coefficients.b == 1 ? "" : coefficients.b == -1 ? "-" : coefficients.b}x ${coefficients.c >= 0 ? "+" : ""} ${coefficients.c} $$`}
                 </MathJax>
               </div>
