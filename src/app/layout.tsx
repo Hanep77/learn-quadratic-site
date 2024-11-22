@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./navbar";
 import { MathJaxContext } from "better-react-mathjax";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,25 +27,24 @@ const mathJaxConfig = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  const [isClient, setIsClient] = useState(false);
+}) {
+  const [isMathJaxLoaded, setMathJaxLoaded] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    setMathJaxLoaded(true);
   }, []);
+
+  if (!isMathJaxLoaded) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-white`}>
         <Navbar />
-        {isClient && (
-          <MathJaxContext config={mathJaxConfig}>
-            {children}
-          </MathJaxContext>
-        )}
-        {!isClient && children} {}
+        <MathJaxContext config={mathJaxConfig}>{children}</MathJaxContext>
       </body>
     </html>
   );
