@@ -9,4 +9,5 @@ export type Question = {
   option?: Option[],
   correctAnswer?: number,
   userAnswer?: number,
+  solution: string,
 }
