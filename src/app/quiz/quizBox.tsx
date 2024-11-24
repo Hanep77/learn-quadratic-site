@@ -18,8 +18,8 @@ export default function QuizBox({ storeAnswer, nextQuestion, currentQuestion }: 
           })}
         </div>
         <div>
-          <button type="button" className="w-full bg-green-600 py-2 rounded font-medium"
-            onClick={nextQuestion}>{currentQuestion?.no == 10 ? "Done" : "Next"}</button>
+          <button type="button" className="w-full bg-green-600 hover:bg-green-700 active:bg-green-800 py-2 rounded font-medium"
+            onClick={nextQuestion}>{currentQuestion?.no == 10 ? "Selesai" : "Lanjut"}</button>
         </div>
       </div>
     </div>
