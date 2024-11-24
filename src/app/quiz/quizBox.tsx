@@ -5,7 +5,7 @@ export default function QuizBox({ storeAnswer, nextQuestion, currentQuestion }: 
   return (
     <div className="flex flex-col md:flex-row max-w-screen-md m-auto p-4 rounded bg-violet-700 bg-opacity-30 gap-5">
       <div className="flex items-center rounded mb-4 md:w-1/2">
-        <p className="text-lg font-medium"><span>{currentQuestion?.no}. </span><MathJax inline>{currentQuestion?.question}</MathJax></p>
+        <p className="text-lg"><span>{currentQuestion?.no}. </span><MathJax inline>{currentQuestion?.question}</MathJax></p>
       </div>
       <div className="md:w-1/2">
         <div className="flex flex-col gap-2 mb-4">

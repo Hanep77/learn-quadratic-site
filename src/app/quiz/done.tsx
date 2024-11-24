@@ -32,7 +32,7 @@ export default function Done({ data, resetQuiz }: { data: Question[], resetQuiz:
                   )
                 })}
               </div>
-              <div className="solution">
+              <div className="solution mt-2">
                 <h3>Solusi:</h3>
                 <MathJax inline>{question.solution}</MathJax>
               </div>
