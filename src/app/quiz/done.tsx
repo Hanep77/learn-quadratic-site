@@ -9,7 +9,7 @@ export default function Done({ data, resetQuiz }: { data: Question[], resetQuiz:
       <div className="max-w-screen-lg m-auto">
         <div className="flex justify-between items-center bg-violet-700 bg-opacity-30 py-4 px-8 mb-4 rounded-full">
           <div className="text-lg">
-            <p>Jaawban benar: <span className="font-semibold"><span className="text-green-500">{totalCorrectAnswer}</span>/10</span></p>
+            <p>Jawaban benar: <span className="font-semibold"><span className="text-green-500">{totalCorrectAnswer}</span>/10</span></p>
             <p>Poin: <span className="font-semibold">{totalCorrectAnswer * 10}</span></p>
           </div>
           <button type="button" onClick={resetQuiz} className="bg-yellow-500 rounded-full py-1 px-2 text-violet-900">Reset</button>
