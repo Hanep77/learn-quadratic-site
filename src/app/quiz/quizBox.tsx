@@ -12,7 +12,7 @@ export default function QuizBox({ storeAnswer, nextQuestion, currentQuestion }: 
           {currentQuestion?.option?.map((opt, i) => {
             return (
               <button onClick={() => storeAnswer(currentQuestion?.no, i)} key={i} type="button"
-                className={`${currentQuestion.userAnswer != i && "bg-opacity-20"} bg-violet-800 py-2 rounded`}>{<MathJax dynamic inline>{opt.answer}</MathJax>}</button>
+                className={`${currentQuestion.userAnswer != i && "bg-opacity-20"} bg-violet-800 py-2 rounded`}>{<MathJax dynamic>{opt.answer}</MathJax>}</button>
             )
           })}
         </div>
