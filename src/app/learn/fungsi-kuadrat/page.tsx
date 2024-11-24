@@ -49,7 +49,7 @@ export default function FungsiKuadrat() {
         <Link href={"/learn/fungsi/macam-macam-fungsi"}>
           <div>
             <p className="text-sm ms-6">Kembali</p>
-            <h3 className="text-xl text-white font-medium"><span className="text-2xl ms-2">&lt;</span> Macam-macam fungsi</h3>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl me-2">&lt;</span> Macam-macam fungsi</h3>
           </div>
         </Link>
         <Link href={"/learn/fungsi-kuadrat/grafik-fungsi-kuadrat"}>

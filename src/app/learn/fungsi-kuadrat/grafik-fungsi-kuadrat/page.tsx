@@ -56,7 +56,7 @@ export default function GrafikFungsiKuadrat() {
         <Link href={"/learn/fungsi-kuadrat"}>
           <div>
             <p className="text-sm ms-6">Kembali</p>
-            <h3 className="text-xl text-white font-medium"><span className="text-2xl ms-2">&lt;</span> Fungsi kuadrat</h3>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl me-2">&lt;</span> Fungsi kuadrat</h3>
           </div>
         </Link>
         <Link href={"/learn/fungsi-kuadrat/contoh-soal"}>
