@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-white`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-[rgba(28,3,50,1)]`}>
         <Navbar />
         <MathJaxContext config={mathJaxConfig}>
           {children}
