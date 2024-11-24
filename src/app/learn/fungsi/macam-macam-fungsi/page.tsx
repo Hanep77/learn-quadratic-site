@@ -2,6 +2,7 @@
 
 import { MathJax } from "better-react-mathjax";
 import Breadcrumbs from "../../breadcrumbs";
+import Link from "next/link";
 
 export default function MacamMacamFungsi() {
   return (
@@ -10,7 +11,7 @@ export default function MacamMacamFungsi() {
       <h4 className="text-lg font-semibold text-green-400 mb-2">Apa itu fungsi?</h4>
       <h2 className="text-3xl font-semibold mb-2 text-white">Macam-macam Fungsi</h2>
       <p>Terdapat berbagai jenis fungsi, antara lain:</p>
-      <ul className="list-disc ms-10 my-2">
+      <ul className="list-disc ms-10 mt-2 mb-8">
         <li>
           <span className="text-white font-medium">Fungsi Linear: </span>Fungsi yang berbentuk <MathJax inline className="text-white">{"\\(f(x) = ax + b\\)"}</MathJax>, dengan grafik berupa garis lurus. Contoh: <MathJax inline className="text-white">{"\\(f(x) = 2x + 1\\)"}</MathJax>.
         </li>
@@ -35,6 +36,20 @@ export default function MacamMacamFungsi() {
           Fungsi yang melibatkan sudut dalam trigonometri, seperti sinus, kosinus, dan tangen. Contoh: <MathJax inline className="text-white">{"\\(f(x) = \\sin(x)\\)"}</MathJax>.
         </li>
       </ul>
+      <div className="flex justify-between">
+        <Link href={"/learn/fungsi"}>
+          <div>
+            <p className="text-sm ms-6">Kembali</p>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl ms-2">&lt;</span> Apa itu fungsi?</h3>
+          </div>
+        </Link>
+        <Link href={"/learn/fungsi-kuadrat"}>
+          <div>
+            <p className="text-sm">Selanjutnya</p>
+            <h3 className="text-xl text-white font-medium">Fungsi kuadrat <span className="text-2xl ms-2">&gt;</span></h3>
+          </div>
+        </Link>
+      </div>
     </>
   );
 }

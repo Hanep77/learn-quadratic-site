@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Breadcrumbs from "../../breadcrumbs";
 import { MathJax } from "better-react-mathjax";
 
@@ -38,7 +39,7 @@ export default function ContohSoal() {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="mb-8">
         <p>
           <span className="text-white font-medium mb-2">Contoh 2: </span>Menyelesaikan dengan Rumus Kuadrat
           Selesaikan persamaan kuadrat <MathJax inline className="text-white">{"\\(3x^2 - 6x + 2 = 0\\)"}</MathJax>.
@@ -55,6 +56,14 @@ export default function ContohSoal() {
           Jadi, akar-akarnya adalah <MathJax inline className="text-white">{"\\(x_1 = 1 + \\frac{\\sqrt{3}}{3}\\)"}</MathJax> dan{" "}
           <MathJax inline className="text-white">{"\\(x_2 = 1 - \\frac{\\sqrt{3}}{3}\\)"}</MathJax>.
         </p>
+      </div>
+      <div>
+        <Link href={"/learn/fungsi-kuadrat/grafik-fungsi-kuadrat"}>
+          <div>
+            <p className="text-sm ms-6">Kembali</p>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl ms-2">&lt;</span> Grafik fungsi kuadrat</h3>
+          </div>
+        </Link>
       </div>
     </>
   );

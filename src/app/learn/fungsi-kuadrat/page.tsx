@@ -2,6 +2,7 @@
 
 import { MathJax } from "better-react-mathjax";
 import Breadcrumbs from "../breadcrumbs";
+import Link from "next/link";
 
 export default function FungsiKuadrat() {
   return (
@@ -24,10 +25,10 @@ export default function FungsiKuadrat() {
           <span className="text-white font-medium inline-block"><MathJax inline className="text-white">{"\\(x\\)"}</MathJax></span> adalah variabel input (atau argumen fungsi)
         </li>
         <li>
-        <span className="text-white font-medium inline-block"><MathJax inline className="text-white">{"\\(f(x)\\)"}</MathJax></span> adalah hasil fungsi atau output dari fungsi untuk input <span className="inline-block"><MathJax inline className="text-white">{"\\(x\\)"}</MathJax></span>
+          <span className="text-white font-medium inline-block"><MathJax inline className="text-white">{"\\(f(x)\\)"}</MathJax></span> adalah hasil fungsi atau output dari fungsi untuk input <span className="inline-block"><MathJax inline className="text-white">{"\\(x\\)"}</MathJax></span>
         </li>
       </ul>
-      <div className="mb-4">
+      <div className="mb-8">
         <h3 className="text-xl font-medium text-white mb-2">Bagian-bagian Fungsi Kuadrat</h3>
         <ul className="list-disc ms-10 my-2">
           <li>
@@ -43,6 +44,20 @@ export default function FungsiKuadrat() {
             Menentukan titik potong dengan sumbu y (<em>y-intercept</em>).
           </li>
         </ul>
+      </div>
+      <div className="flex justify-between">
+        <Link href={"/learn/fungsi/macam-macam-fungsi"}>
+          <div>
+            <p className="text-sm ms-6">Kembali</p>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl ms-2">&lt;</span> Macam-macam fungsi</h3>
+          </div>
+        </Link>
+        <Link href={"/learn/fungsi-kuadrat/grafik-fungsi-kuadrat"}>
+          <div>
+            <p className="text-sm">Selanjutnya</p>
+            <h3 className="text-xl text-white font-medium">Grafik fungsi kuadrat <span className="text-2xl ms-2">&gt;</span></h3>
+          </div>
+        </Link>
       </div>
     </>
   );

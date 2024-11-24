@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Breadcrumbs from "../../breadcrumbs";
 
 export default function Learn() {
@@ -7,7 +8,7 @@ export default function Learn() {
       <h4 className="text-lg font-semibold text-green-400 mb-2">Pengantar</h4>
       <h2 className="text-3xl font-semibold mb-2 text-white">Pre-requisites</h2>
       <p>Sebelum mempelajari fungsi dan fungsi kuadrat, ada beberapa konsep dasar yang perlu dikuasai terlebih dahulu yaitu:</p>
-      <ol className="list-decimal ms-10 my-2">
+      <ol className="list-decimal ms-10 mt-2 mb-8">
         <li>Konsep Dasar Matematika
           <ul className="list-disc ms-10 my-2">
             <li>Bilangan Real: Pemahaman tentang bilangan positif, negatif, nol, dan pecahan.</li>
@@ -28,7 +29,20 @@ export default function Learn() {
           </ul>
         </li>
       </ol>
-
+      <div className="flex justify-between">
+        <Link href={"/learn"}>
+          <div>
+            <p className="text-sm ms-6">Kembali</p>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl ms-2">&lt;</span> Pendahuluan</h3>
+          </div>
+        </Link>
+        <Link href={"/learn/fungsi"}>
+          <div>
+            <p className="text-sm">Selanjutnya</p>
+            <h3 className="text-xl text-white font-medium">Apa itu fungsi? <span className="text-2xl ms-2">&gt;</span></h3>
+          </div>
+        </Link>
+      </div>
     </>
   )
 }
