@@ -1,8 +1,7 @@
 [
     {
         "no": 1,
-        "question": "Diketahui fungsi kuadrat |f(x) = x^2 - 4x + 3|. Berapakah titik potong fungsi tersebut dengan sumbu x?",
-        "image": null,
+        "question": "Diketahui fungsi kuadrat \\(f(x) = x^2 - 4x + 3\\). Berapakah titik potong fungsi tersebut dengan sumbu \\(x\\)?",
         "option": [
             {
                 "alphabet": "A",
@@ -22,12 +21,11 @@
             }
         ],
         "correctAnswer": 0,
-        "solution": "Titik potong dengan sumbu x adalah nilai ketika f(x) = 0. Persamaan: x^2 - 4x + 3 = 0. Faktorkan: (x - 1)(x - 3) = 0, sehingga x = 1 dan x = 3."
+        "solution": "Titik potong dengan sumbu \\(x\\) adalah nilai ketika \\(f(x) = 0\\). Persamaan: \\(x^2 - 4x + 3 = 0\\). Faktorkan: \\((x - 1)(x - 3) = 0\\), sehingga \\(x = 1\\) dan \\(x = 3\\)."
     },
     {
         "no": 2,
-        "question": "Diketahui fungsi kuadrat |f(x) = 2x^2 - 8x + 6|. Berapakah sumbu simetrinya?",
-        "image": null,
+        "question": "Diketahui fungsi kuadrat \\(f(x) = 2x^2 - 8x + 6\\). Berapakah sumbu simetrinya?",
         "option": [
             {
                 "alphabet": "A",
@@ -47,186 +45,155 @@
             }
         ],
         "correctAnswer": 1,
-        "solution": "Sumbu simetri dihitung dengan rumus x = -b / (2a). Substitusi a = 2 dan b = -8: x = -(-8) / (2 * 2) = 8 / 4 = 2."
+        "solution": "Sumbu simetri dihitung dengan rumus \\(x = \\frac{-b}{2a}\\). Substitusi \\(a = 2\\) dan \\(b = -8\\): \\(x = \\frac{-(-8)}{2(2)} = \\frac{8}{4} = 2\\)."
     },
     {
         "no": 3,
-        "question": "Grafik fungsi kuadrat |f(x) = -3x^2 + 5x - 2| terbuka ke arah mana?",
-        "image": null,
+        "question": "Grafik fungsi kuadrat \\(f(x) = -3x^2 + 5x - 2\\) terbuka ke arah mana?",
         "option": [
             {
                 "alphabet": "A",
-                "answer": "Ke atas",
-                "image": null
+                "answer": "Ke atas"
             },
             {
                 "alphabet": "B",
-                "answer": "Ke bawah",
-                "image": null
+                "answer": "Ke bawah"
             },
             {
                 "alphabet": "C",
-                "answer": "Tegak lurus",
-                "image": null
+                "answer": "Tegak lurus"
             },
             {
                 "alphabet": "D",
-                "answer": "Horisontal",
-                "image": null
+                "answer": "Horisontal"
             }
         ],
         "correctAnswer": 1,
-        "solution": "Grafik fungsi kuadrat terbuka ke bawah jika koefisien a < 0. Pada f(x) = -3x^2 + 5x - 2, a = -3, maka parabola terbuka ke bawah."
+        "solution": "Grafik fungsi kuadrat terbuka ke bawah jika koefisien \\(a < 0\\). Pada \\(f(x) = -3x^2 + 5x - 2\\), \\(a = -3\\), maka parabola terbuka ke bawah."
     },
     {
         "no": 4,
-        "question": "Diketahui fungsi kuadrat |f(x) = -x^2 + 4x - 3|. Berapakah koordinat titik puncaknya?",
-        "image": null,
+        "question": "Diketahui fungsi kuadrat \\(f(x) = -x^2 + 4x - 3\\). Berapakah koordinat titik puncaknya?",
         "option": [
             {
                 "alphabet": "A",
-                "answer": "(2, -1)",
-                "image": null
+                "answer": "(2, -1)"
             },
             {
                 "alphabet": "B",
-                "answer": "(2, 1)",
-                "image": null
+                "answer": "(2, 1)"
             },
             {
                 "alphabet": "C",
-                "answer": "(1, 2)",
-                "image": null
+                "answer": "(1, 2)"
             },
             {
                 "alphabet": "D",
-                "answer": "(-2, 1)",
-                "image": null
+                "answer": "(-2, 1)"
             }
         ],
         "correctAnswer": 0,
-        "solution": "Titik puncak dihitung dengan x = -b / (2a) dan y = f(x). Substitusi a = -1, b = 4: x = -4 / (2 * -1) = 2. Hitung y: f(2) = -(2)^2 + 4(2) - 3 = -4 + 8 - 3 = -1. Jadi, titik puncaknya (2, -1)."
+        "solution": "Titik puncak dihitung dengan \\(x = \\frac{-b}{2a}\\) dan \\(y = f(x)\\). Substitusi \\(a = -1\\), \\(b = 4\\): \\(x = \\frac{-4}{2(-1)} = 2\\). Hitung \\(y\\): \\(f(2) = -(2)^2 + 4(2) - 3 = -4 + 8 - 3 = -1\\). Jadi, titik puncaknya (2, -1)."
     },
     {
         "no": 5,
-        "question": "Diketahui fungsi kuadrat |f(x) = 3x^2 - 6x + 2|. Berapakah nilai diskriminannya?",
-        "image": null,
+        "question": "Diketahui fungsi kuadrat \\(f(x) = 3x^2 - 6x + 2\\). Berapakah nilai diskriminannya?",
         "option": [
             {
                 "alphabet": "A",
-                "answer": "8",
-                "image": null
+                "answer": "8"
             },
             {
                 "alphabet": "B",
-                "answer": "12",
-                "image": null
+                "answer": "12"
             },
             {
                 "alphabet": "C",
-                "answer": "16",
-                "image": null
+                "answer": "16"
             },
             {
                 "alphabet": "D",
-                "answer": "0",
-                "image": null
+                "answer": "0"
             }
         ],
         "correctAnswer": 1,
-        "solution": "Diskriminan: Δ = b^2 - 4ac. Substitusi a = 3, b = -6, c = 2: Δ = (-6)^2 - 4(3)(2) = 36 - 24 = 12."
+        "solution": "Diskriminan: \\(\\Delta = b^2 - 4ac\\). Substitusi \\(a = 3\\), \\(b = -6\\), \\(c = 2\\): \\(\\Delta = (-6)^2 - 4(3)(2) = 36 - 24 = 12\\)."
     },
     {
         "no": 6,
-        "question": "Diketahui fungsi kuadrat |f(x) = x^2 - 6x + 9|. Apakah sifat akar-akarnya?",
-        "image": null,
+        "question": "Diketahui fungsi kuadrat \\(f(x) = x^2 - 6x + 9\\). Apakah sifat akar-akarnya?",
         "option": [
             {
                 "alphabet": "A",
-                "answer": "Dua akar real berbeda",
-                "image": null
+                "answer": "Dua akar real berbeda"
             },
             {
                 "alphabet": "B",
-                "answer": "Dua akar imajiner",
-                "image": null
+                "answer": "Dua akar imajiner"
             },
             {
                 "alphabet": "C",
-                "answer": "Satu akar kembar",
-                "image": null
+                "answer": "Satu akar kembar"
             },
             {
                 "alphabet": "D",
-                "answer": "Tidak memiliki akar",
-                "image": null
+                "answer": "Tidak memiliki akar"
             }
         ],
         "correctAnswer": 2,
-        "solution": "Diskriminan: Δ = b^2 - 4ac. Substitusi a = 1, b = -6, c = 9: Δ = (-6)^2 - 4(1)(9) = 36 - 36 = 0. Jika Δ = 0, maka akarnya kembar."
+        "solution": "Diskriminan: \\(\\Delta = b^2 - 4ac\\). Substitusi \\(a = 1\\), \\(b = -6\\), \\(c = 9\\): \\(\\Delta = (-6)^2 - 4(1)(9) = 36 - 36 = 0\\). Jika \\(\\Delta = 0\\), maka akarnya kembar."
     },
     {
         "no": 7,
-        "question": "Jika fungsi kuadrat |f(x) = 2x^2 - 4x + 1|, berapakah nilai f(2)?",
-        "image": null,
+        "question": "Jika fungsi kuadrat \\(f(x) = 2x^2 - 4x + 1\\), berapakah nilai \\(f(2)\\)?",
         "option": [
             {
                 "alphabet": "A",
-                "answer": "-1",
-                "image": null
+                "answer": "-1"
             },
             {
                 "alphabet": "B",
-                "answer": "0",
-                "image": null
+                "answer": "0"
             },
             {
                 "alphabet": "C",
-                "answer": "1",
-                "image": null
+                "answer": "1"
             },
             {
                 "alphabet": "D",
-                "answer": "2",
-                "image": null
+                "answer": "2"
             }
         ],
         "correctAnswer": 0,
-        "solution": "Substitusi x = 2 ke f(x): f(2) = 2(2)^2 - 4(2) + 1 = 8 - 8 + 1 = -1."
+        "solution": "Substitusi \\(x = 2\\) ke \\(f(x)\\): \\(f(2) = 2(2)^2 - 4(2) + 1 = 8 - 8 + 1 = -1\\)."
     },
     {
         "no": 8,
-        "question": "Fungsi kuadrat |f(x) = -x^2 + 6x - 9| memotong sumbu y pada titik berapa?",
-        "image": null,
+        "question": "Fungsi kuadrat \\(f(x) = -x^2 + 6x - 9\\) memotong sumbu \\(y\\) pada titik berapa?",
         "option": [
             {
                 "alphabet": "A",
-                "answer": "(0, -9)",
-                "image": null
+                "answer": "(0, -9)"
             },
             {
                 "alphabet": "B",
-                "answer": "(0, 9)",
-                "image": null
+                "answer": "(0, 9)"
             },
             {
                 "alphabet": "C",
-                "answer": "(9, 0)",
-                "image": null
+                "answer": "(9, 0)"
             },
             {
                 "alphabet": "D",
-                "answer": "(-9, 0)",
-                "image": null
+                "answer": "(-9, 0)"
             }
         ],
         "correctAnswer": 0,
-        "solution": "Titik potong dengan sumbu y terjadi ketika x = 0: f(0) = -0^2 + 6(0) - 9 = -9. Titiknya adalah (0, -9)."
+        "solution": "Titik potong dengan sumbu \\(y\\) terjadi ketika \\(x = 0\\): \\(f(0) = -0^2 + 6(0) - 9 = -9\\). Titiknya adalah (0, -9)."
     },
     {
         "no": 9,
-        "question": "Diketahui fungsi kuadrat |f(x) = x^2 - 2x - 3|. Berapakah akar-akarnya?",
-        "image": null,
+        "question": "Diketahui fungsi kuadrat \\(f(x) = x^2 - 2x - 3\\). Berapakah akar-akarnya?",
         "option": [
             {
                 "alphabet": "A",
@@ -246,7 +213,7 @@
             }
         ],
         "correctAnswer": 0,
-        "solution": "Faktorkan x^2 - 2x - 3 = (x - 3)(x + 1). Jadi akar-akarnya adalah x = -1 dan x = 3."
+        "solution": "Faktorkan \\(f(x) = x^2 - 2x - 3 = (x - 3)(x + 1)\\). Jadi, akarnya adalah \\(x = -1\\) dan \\(x = 3\\)."
     },
     {
         "no": 10,
