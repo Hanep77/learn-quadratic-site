@@ -1,16 +1,21 @@
 "use client"
 
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Learn({ children }: { children: React.ReactNode }) {
   const pathname: string = usePathname();
+  const [menu, setMenu] = useState<boolean>(false)
 
   return (
-    <div className="bg-[rgba(28,3,50,1)] pt-20 min-h-screen max-w-screen">
-      <div className="max-w-screen-lg m-auto flex gap-5">
-        <aside className="h-screen overflow-y-auto min-w-48 flex flex-col gap-5">
+    <div className="bg-[rgba(28,3,50,1)] pt-16 md:pt-20 min-h-screen max-w-screen">
+      <button onClick={() => setMenu(!menu)} type="button"
+        className="fixed flex items-center bg-[rgba(28,3,50,1)] border-b border-violet-900 py-1 px-4 md:hidden w-full text-start z-30">
+        <span className={`inline-block mr-2 text-xl text-medium ${menu && "rotate-180"} transition`}>&gt;</span> Menu
+      </button>
+      <div className="max-w-screen-lg m-auto flex gap-5 px-4 lg:px-0 pt-14 md:pt-0">
+        <aside className={`fixed bg-[rgba(28,3,50,1)] md:bg-transparent top-0 pt-28 md:top-20 ${!menu && "hidden"} left-0 md:left-auto right-0 md:right-auto p-4 md:p-0 md:pt h-screen overflow-y-auto md:flex flex-col gap-5 z-20`}>
           <div>
             <h6 className="font-medium mb-2">Pengantar</h6>
             <ul className="text-violet-400 font-light">
@@ -35,7 +40,7 @@ export default function Learn({ children }: { children: React.ReactNode }) {
           </div>
         </aside>
         <div className="flex-grow">
-          <div className="w-full leading-7 text-lg text-violet-300 pb-16">
+          <div className="w-full leading-7 text-lg text-violet-300 pb-16 md:ps-52">
             {children}
           </div>
         </div>
