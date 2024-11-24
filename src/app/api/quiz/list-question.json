@@ -5,19 +5,19 @@
         "option": [
             {
                 "alphabet": "A",
-                "answer": "x = 1 dan x = 3"
+                "answer": "\\(x = 1\\) dan \\(x = 3\\)"
             },
             {
                 "alphabet": "B",
-                "answer": "x = -1 dan x = -3"
+                "answer": "\\(x = -1\\) dan \\(x = -3\\)"
             },
             {
                 "alphabet": "C",
-                "answer": "x = 2 dan x = 3"
+                "answer": "\\(x = 2\\) dan \\(x = 3\\)"
             },
             {
                 "alphabet": "D",
-                "answer": "x = -2 dan x = 3"
+                "answer": "\\(x = -2\\) dan \\(x = 3\\)"
             }
         ],
         "correctAnswer": 0,
@@ -29,19 +29,19 @@
         "option": [
             {
                 "alphabet": "A",
-                "answer": "x = -2"
+                "answer": "\\(x = -2\\)"
             },
             {
                 "alphabet": "B",
-                "answer": "x = 2"
+                "answer": "\\(x = 2\\)"
             },
             {
                 "alphabet": "C",
-                "answer": "x = -1"
+                "answer": "\\(x = -1\\)"
             },
             {
                 "alphabet": "D",
-                "answer": "x = 1"
+                "answer": "\\(x = 1\\)"
             }
         ],
         "correctAnswer": 1,
@@ -197,19 +197,19 @@
         "option": [
             {
                 "alphabet": "A",
-                "answer": "x = -1 dan x = 3"
+                "answer": "\\(x = -1\\) dan \\(x = 3\\)"
             },
             {
                 "alphabet": "B",
-                "answer": "x = 1 dan x = -3"
+                "answer": "\\(x = 1\\) dan \\(x = -3\\)"
             },
             {
                 "alphabet": "C",
-                "answer": "x = 1 dan x = 3"
+                "answer": "\\(x = 1\\) dan \\(x = 3\\)"
             },
             {
                 "alphabet": "D",
-                "answer": "x = -1 dan x = -3"
+                "answer": "\\(x = -1\\) dan \\(x = -3\\)"
             }
         ],
         "correctAnswer": 0,
@@ -217,26 +217,27 @@
     },
     {
         "no": 10,
-        "question": "Diketahui fungsi kuadrat \\(f(x) = -4x^2 + 8x - 3\\). Apa titik puncaknya?",
+        "question": "Jika grafik fungsi kuadrat \\(f(x) = 2x^2 - 8x + 6\\) memiliki titik puncak di (h, k), berapakah nilai h dan k?",
         "option": [
             {
                 "alphabet": "A",
-                "answer": "(1, 1)"
+                "answer": "\\(h = 2, k = -2\\)"     
             },
             {
                 "alphabet": "B",
-                "answer": "(1, -1)"
+                "answer": "\\(h = 1, k = -2\\)"
             },
             {
                 "alphabet": "C",
-                "answer": "(0, 0)"
+                "answer": "\\(h = 2, k = 2\\)"
             },
             {
                 "alphabet": "D",
-                "answer": "(2, -1)"
+                "answer": "\\(h = 1, k = 2\\)"   
             }
         ],
-        "correctAnswer": 1,
-        "solution": "Sumbu simetri dihitung dengan \\(x = \\frac{-b}{2a}\\), yaitu \\(x = \\frac{-8}{2(-4)} = 1\\). Kemudian, \\(f(1) = -4(1)^2 + 8(1) - 3 = -4 + 8 - 3 = -1\\). Jadi, titik puncaknya adalah (1, -1)."
+        "correctAnswer": 0,
+        "solution": "Titik puncak dihitung dengan \\(x = \\frac{-b}{2a}\\) dan \\(y = f(x)\\). Substitusi \\(a = 2\\), \\(b = -8\\): \\(x = \\frac{-(-8)}{2(2)} = \\frac{8}{4} = 2\\). Hitung \\(y\\): \\(f(2) = 2(2)^2 - 8(2) + 6 = 8 - 16 + 6 = -2\\). Jadi, titik puncaknya adalah (2, -2)."
     }
+    
 ]
