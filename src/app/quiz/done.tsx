@@ -16,18 +16,19 @@ export default function Done({ data, resetQuiz }: { data: Question[], resetQuiz:
         </div>
 
         {data.map(question => {
+          const filteredQuestion: string[] = question!.question!.split("|");
           const isCorrect = question.correctAnswer == question.userAnswer;
 
           return (
             <div key={question.no} className={`${isCorrect ? "bg-green-700 border-green-600" : "bg-red-700 border-red-600"} bg-opacity-30 p-4 mb-4 rounded`}>
-              <p className="mb-2"><span>{question.no}. </span><MathJax inline>{question.question}</MathJax></p>
+              <p className="mb-2"><span>{question.no}. </span>{filteredQuestion[0]} <MathJax inline>{`$${filteredQuestion[1]}$`}</MathJax> {filteredQuestion[2]}</p>
               <div className="grid grid-cols-2 gap-2">
                 {question!.option!.map((opt, i) => {
                   return (
                     <button key={i}
                       type="button"
                       className={`${question.correctAnswer == i ? "bg-green-700" : "bg-violet-700 " + (question.userAnswer != i && "bg-opacity-30")} py-2 rounded`}>
-                      {<MathJax inline>{opt.answer}</MathJax>}
+                      {opt.answer}
                     </button>
                   )
                 })}
