@@ -123,9 +123,8 @@ export default function Calculator() {
               </div>
               <button
                 onClick={generateGraphData}
-                className="bg-green-500 text-white px-3 py-2 rounded cursor-pointer z-10"
-              >
-                Generate Graph
+                className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white px-3 py-2 rounded cursor-pointer z-10">
+                Buat Grafik
               </button>
             </div>
           </div>

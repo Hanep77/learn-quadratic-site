@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Breadcrumbs from "./breadcrumbs";
 
 export default function Learn() {
@@ -6,7 +7,7 @@ export default function Learn() {
       <Breadcrumbs chapter="Pengantar" title="Pendahuluan" />
       <h4 className="text-lg font-semibold text-green-400 mb-2">Pengantar</h4>
       <h2 className="text-3xl font-semibold mb-2 text-white">Pendahuluan</h2>
-      <div className="text-justify">
+      <div className="text-justify mb-8">
         <p className="mb-2">
           Website ini dibuat sebagai media pembelajaran digital tentang fungsi, khususnya fungsi kuadrat. Website ini juga sebagai salah satu syarat pemenuhan tugas UAS mata kuliah kalkulus I. Web ini menyediakan materi pembelajaran dan kalkulator grafik yang dapat memvisualisasikan bentuk dari fungsi. Selain itu terdapat juga quiz yang dapat pengguna selesaikan untuk menguji hasil pembelajaran.
         </p>
@@ -18,6 +19,14 @@ export default function Learn() {
         </p>
         <p>
           Namun, sebelum mempelajari fungsi kuadrat secara mendalam, diperlukan pemahaman konsep-konsep dasar agar materi dapat dipahami dengan baik.</p>
+      </div>
+      <div className="flex justify-end">
+        <Link href={"/learn/pengantar/prerequisit"}>
+          <div>
+            <p className="text-sm">Selanjutnya</p>
+            <h3 className="text-xl text-white font-medium">Pre-requisit <span className="text-2xl ms-2">&gt;</span></h3>
+          </div>
+        </Link>
       </div>
     </>
   )

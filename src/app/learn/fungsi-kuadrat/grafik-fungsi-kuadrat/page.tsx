@@ -2,6 +2,7 @@
 
 import { MathJax } from "better-react-mathjax";
 import Breadcrumbs from "../../breadcrumbs";
+import Link from "next/link";
 
 export default function GrafikFungsiKuadrat() {
   return (
@@ -12,7 +13,7 @@ export default function GrafikFungsiKuadrat() {
       <p className="mb-2">
         Grafik dari fungsi kuadrat berbentuk parabola. Beberapa karakteristik grafik fungsi kuadrat antara lain:
       </p>
-      <ul className="list-disc ms-10 mb-4">
+      <ul className="list-disc ms-10 mb-8">
         <li>
           <p className="mb-2">
             <span className="text-white font-medium">Sumbu Simetri:</span> Grafik fungsi kuadrat simetris terhadap garis vertikal yang melalui titik puncak parabola. Sumbu simetri dapat ditemukan dengan rumus:
@@ -51,6 +52,20 @@ export default function GrafikFungsiKuadrat() {
           </ul>
         </li>
       </ul>
+      <div className="flex justify-between">
+        <Link href={"/learn/fungsi-kuadrat"}>
+          <div>
+            <p className="text-sm ms-6">Kembali</p>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl me-2">&lt;</span> Fungsi kuadrat</h3>
+          </div>
+        </Link>
+        <Link href={"/learn/fungsi-kuadrat/contoh-soal"}>
+          <div>
+            <p className="text-sm">Selanjutnya</p>
+            <h3 className="text-xl text-white font-medium">Contoh soal <span className="text-2xl ms-2">&gt;</span></h3>
+          </div>
+        </Link>
+      </div>
     </>
   );
 }

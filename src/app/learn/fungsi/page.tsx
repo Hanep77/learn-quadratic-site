@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Breadcrumbs from "../breadcrumbs";
 import { MathJax } from "better-react-mathjax";
 
@@ -37,7 +38,7 @@ export default function Fungsi() {
           <p>Jadi, <MathJax inline className="text-white">{"\\(f(2) = 7\\)"}</MathJax>.</p>
         </div>
       </div>
-      <div>
+      <div className="mb-8">
         <h3 className="text-xl font-semibold mb-2 text-white">Komponen Fungsi</h3>
         <ul className="list-disc ms-10 my-2">
           <li>
@@ -50,6 +51,20 @@ export default function Fungsi() {
             <span className="text-white font-medium">Range (Daerah hasil):</span> Himpunan dari semua nilai output yang dihasilkan oleh fungsi. Range adalah bagian dari kodomain yang benar-benar dicapai oleh fungsi.
           </li>
         </ul>
+      </div>
+      <div className="flex justify-between">
+        <Link href={"/learn/pengantar/prerequisit"}>
+          <div>
+            <p className="text-sm ms-6">Kembali</p>
+            <h3 className="text-xl text-white font-medium"><span className="text-2xl me-2">&lt;</span> Pre-requisit</h3>
+          </div>
+        </Link>
+        <Link href={"/learn/fungsi/macam-macam-fungsi"}>
+          <div>
+            <p className="text-sm">Selanjutnya</p>
+            <h3 className="text-xl text-white font-medium">Macam-macam fungsi <span className="text-2xl ms-2">&gt;</span></h3>
+          </div>
+        </Link>
       </div>
     </>
   );
