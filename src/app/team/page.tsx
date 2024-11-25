@@ -12,7 +12,7 @@ export default function Team() {
             <div className="p-2 text-center">
               <h5 className="text-lg font-medium">Yudis Sutisna</h5>
               <p className="text-sm">Developer</p>
-              <p className="italic text-violet-300">"rahasia menjadi pintar adalah the secret of being smart"</p>
+              <p className="italic text-violet-300">&quot;rahasia menjadi pintar adalah the secret of being smart&quot;</p>
             </div>
           </div>
           <div className="bg-violet-900 p-1 rounded w-72 sm:w-60">
@@ -21,8 +21,8 @@ export default function Team() {
             </div>
             <div className="p-2 text-center">
               <h5 className="text-lg font-medium">Adi M. Yasir</h5>
-              <p className="text-sm">Developer & Penyusun Materi</p>
-              <p className="italic text-violet-300">"Bekerja dengan hati, dan kadang-kadang dengan Google."</p>
+              <p className="text-sm">Developer &amp; Penyusun Materi</p>
+              <p className="italic text-violet-300">&quot;Bekerja dengan hati, dan kadang-kadang dengan Google.&quot;</p>
             </div>
           </div>
           <div className="bg-violet-900 p-1 rounded w-72 sm:w-60">
@@ -32,7 +32,7 @@ export default function Team() {
             <div className="py-2 text-center">
               <h5 className="text-lg font-medium">Abdul Aziz</h5>
               <p className="text-sm">UI/UX Designer</p>
-              <p className="italic text-violet-300">"Keberhasilan bukan soal seberapa cepat melangkah, melainkan seberapa konsisten kamu melangkah."</p>
+              <p className="italic text-violet-300">&quot;Keberhasilan bukan soal seberapa cepat melangkah, melainkan seberapa konsisten kamu melangkah.&quot;</p>
             </div>
           </div>
         </div>
