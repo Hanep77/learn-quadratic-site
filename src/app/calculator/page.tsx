@@ -88,7 +88,7 @@ export default function Calculator() {
                 <Plot
                   data={graphData}
                   layout={{
-                    title: "Quadratic Function Graph",
+                    title: "Grafik Fungsi Kuadrat",
                     xaxis: { title: "x" },
                     yaxis: { title: "f(x)" },
                     boxmode: "overlay",
