@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { evaluate } from "mathjs";
-import '../globals.css';
+import "../globals.css";
+import { Layout } from "plotly.js";
 
 const MathJax = dynamic(() => import("better-react-mathjax").then(mod => mod.MathJax), {
   ssr: false,
@@ -19,7 +20,7 @@ type GraphData = {
   y: number[];
   type: "scatter";
   mode: "markers" | "lines";
-  marker: { color: string, size?: number };
+  marker: { color: string; size?: number };
   name: string;
 };
 
@@ -31,6 +32,17 @@ export default function Calculator() {
   });
 
   const [graphData, setGraphData] = useState<GraphData[]>([]);
+  const [layout, setLayout] = useState<Partial<Layout>>({
+    title: "Grafik Fungsi Kuadrat",
+    xaxis: { title: "x" },
+    yaxis: { title: "f(x)" },
+    legend: { orientation: "h" },
+    boxmode: "overlay",
+    modebar: {
+      activecolor: "green",
+      orientation: "v",
+    },
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -45,7 +57,6 @@ export default function Calculator() {
       const { a, b, c } = coefficients;
 
       const xValues = Array.from({ length: 201 }, (_, i) => -10 + i * 0.1);
-
       const yValues = xValues.map((x) =>
         evaluate(`${a} * x^2 + ${b} * x + ${c}`, { x }) as number
       );
@@ -67,10 +78,36 @@ export default function Calculator() {
           y: [yVertex],
           type: "scatter",
           mode: "markers",
-          marker: { color: "red", size: 15 },
+          marker: { color: "green", size: 15 },
           name: "Vertex",
         },
       ];
+
+      setLayout({
+        ...layout,
+        annotations: [
+          {
+            x: xVertex,
+            y: yVertex,
+            text: `Vertex: (${xVertex}, ${yVertex})`,
+            clicktoshow: "onout",
+            showarrow: true,
+            arrowhead: 2,
+            ax: 0,
+            ay: -30,
+            font: {
+              size: 12,
+              color: "white",
+            },
+            arrowcolor: "black",
+            align: "center",
+            bgcolor: "rgba(28,3,50,0.8)",
+            bordercolor: "white",
+            borderpad: 4,
+            borderwidth: 1,
+          },
+        ],
+      });
 
       setGraphData(data);
     } catch (error) {
@@ -87,23 +124,18 @@ export default function Calculator() {
               <div className="rounded flex-grow">
                 <Plot
                   data={graphData}
-                  layout={{
-                    title: "Grafik Fungsi Kuadrat",
-                    xaxis: { title: "x" },
-                    yaxis: { title: "f(x)" },
-                    boxmode: "overlay",
-                    modebar: {
-                      activecolor: "green",
-                      orientation: "v",
-                    }
-                  }}
+                  layout={layout}
                   config={{
                     displaylogo: false,
                     showTips: true,
                     doubleClick: "autosize",
+                    watermark: false,
+                    scrollZoom: true,
                     toImageButtonOptions: {
                       format: "png",
                       filename: "quadratic_function_graph",
+                      height: 600,
+                      width: 600,
                     },
                     modeBarButtonsToRemove: ["select2d", "lasso2d"],
                   }}
@@ -112,12 +144,14 @@ export default function Calculator() {
               </div>
               <div className="font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
                 <MathJax dynamic>
-                  {`$$ f(x) = ${coefficients.a == 1 ? "" : coefficients.a == -1 ? "-" : coefficients.a}x^2 ${coefficients.b >= 0 ? "+" : ""} ${coefficients.b == 1 ? "" : coefficients.b == -1 ? "-" : coefficients.b}x ${coefficients.c >= 0 ? "+" : ""} ${coefficients.c} $$`}
+                  {`$$ f(x) = ${coefficients.a === 1 ? "" : coefficients.a === -1 ? "-" : coefficients.a}x^2 ${coefficients.b >= 0 ? "+" : ""} ${coefficients.b === 1 ? "" : coefficients.b === -1 ? "-" : coefficients.b}x ${coefficients.c >= 0 ? "+" : ""} ${coefficients.c} $$`}
                 </MathJax>
               </div>
               <div className="flex gap-2 bg-violet-700 bg-opacity-30 py-2 gap rounded">
                 <label className="flex items-center">
-                  <span className="mr-2"><MathJax inline>{"$ a: $"}</MathJax></span>
+                  <span className="mr-2">
+                    <MathJax inline>{"$ a: $"}</MathJax>
+                  </span>
                   <input
                     type="number"
                     name="a"
@@ -127,7 +161,9 @@ export default function Calculator() {
                   />
                 </label>
                 <label className="flex items-center">
-                  <span className="mr-2"><MathJax inline>{"$ b: $"}</MathJax></span>
+                  <span className="mr-2">
+                    <MathJax inline>{"$ b: $"}</MathJax>
+                  </span>
                   <input
                     type="number"
                     name="b"
@@ -137,7 +173,9 @@ export default function Calculator() {
                   />
                 </label>
                 <label className="flex items-center">
-                  <span className="mr-2"><MathJax inline>{"$ c: $"}</MathJax></span>
+                  <span className="mr-2">
+                    <MathJax inline>{"$ c: $"}</MathJax>
+                  </span>
                   <input
                     type="number"
                     name="c"
@@ -149,12 +187,12 @@ export default function Calculator() {
               </div>
               <button
                 onClick={generateGraphData}
-                className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white px-3 py-2 rounded cursor-pointer z-10">
+                className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white px-3 py-2 rounded cursor-pointer z-10"
+              >
                 Buat Grafik
               </button>
             </div>
           </div>
-          {/**/}
         </div>
       </div>
     </>
