@@ -13,7 +13,7 @@ export default function Home() {
           <div className="min-h-screen flex justify-center items-center">
             <div className="text-center max-w-screen-md bg-[rgba(250,250,250,.1)] p-5 py-12 rounded-md backdrop-blur-[2px]">
               <h1 className="text-3xl md:text-5xl font-bold mb-5">
-                Selamat Datang di Platform Pembelajaran kami!
+                Selamat Datang di <span className="text-green-500">Platform Pembelajaran</span> kami!
               </h1>
               <div className="max-w-[570px] m-auto">
                 <p className="text-lg md:text-xl text-violet-300 font-light">Gabung Sekarang dan Rasakan Serunya Belajar Kalkulus
@@ -27,9 +27,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-screen flex flex-col justify-center items-center">
+      <section className="min-h-screen flex flex-col justify-center items-center px-4 md:px-0">
         <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">Sekilas tentang <span className="text-green-500">website </span>ini</h1>
-        <div className="text-justify max-w-screen-lg px-4 md:px-0">
+        <div className="text-justify max-w-screen-lg">
           <div className="flex flex-col sm:flex-row mb-5">
             <div className="sm:w-1/2 flex justify-center mb-5 md:mb-0">
               <Image src={"/GeoGebra-fuer-interaktive-Tafelaufgaben.svg"} alt="belajar" width={500} height={500} className="w-96 border-s-2 border-t-2 p-2" />
