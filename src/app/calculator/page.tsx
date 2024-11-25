@@ -36,7 +36,7 @@ export default function Calculator() {
     title: "Grafik Fungsi Kuadrat",
     xaxis: { title: "x" },
     yaxis: { title: "f(x)" },
-    legend: { orientation: "h" },
+    legend: { orientation: "v" },
     boxmode: "overlay",
     modebar: {
       activecolor: "green",
