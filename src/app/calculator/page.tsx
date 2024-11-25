@@ -18,8 +18,8 @@ type GraphData = {
   x: number[];
   y: number[];
   type: "scatter";
-  mode: "lines";
-  marker: { color: string };
+  mode: "markers" | "lines";
+  marker: { color: string, size?: number };
   name: string;
 };
 
@@ -50,14 +50,25 @@ export default function Calculator() {
         evaluate(`${a} * x^2 + ${b} * x + ${c}`, { x }) as number
       );
 
+      const xVertex = -b / (2 * a);
+      const yVertex = evaluate(`${a} * x^2 + ${b} * x + ${c}`, { x: xVertex });
+
       const data: GraphData[] = [
         {
           x: xValues,
           y: yValues,
           type: "scatter",
           mode: "lines",
-          marker: { color: "blue" },
+          marker: { color: "purple" },
           name: "f(x)",
+        },
+        {
+          x: [xVertex],
+          y: [yVertex],
+          type: "scatter",
+          mode: "markers",
+          marker: { color: "red", size: 15 },
+          name: "Vertex",
         },
       ];
 
@@ -80,6 +91,16 @@ export default function Calculator() {
                     title: "Quadratic Function Graph",
                     xaxis: { title: "x" },
                     yaxis: { title: "f(x)" },
+                    boxmode: "overlay",
+                  }}
+                  config={{
+                    displaylogo: false,
+                    showTips: true,
+                    toImageButtonOptions: {
+                      format: "png",
+                      filename: "quadratic_function_graph",
+                    },
+                    modeBarButtonsToRemove: ["select2d", "lasso2d"],
                   }}
                   className="w-80 sm:w-[500px] md:w-full rounded overflow-hidden"
                 />
