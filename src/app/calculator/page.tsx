@@ -95,7 +95,7 @@ export default function Calculator() {
                   <input
                     type="number"
                     name="a"
-                    value={coefficients.a}
+                    defaultValue={coefficients.a}
                     onChange={handleChange}
                     className="w-16 border p-1 rounded text-black"
                   />
@@ -105,7 +105,7 @@ export default function Calculator() {
                   <input
                     type="number"
                     name="b"
-                    value={coefficients.b}
+                    defaultValue={coefficients.b}
                     onChange={handleChange}
                     className="w-16 border p-1 rounded text-black"
                   />
@@ -115,7 +115,7 @@ export default function Calculator() {
                   <input
                     type="number"
                     name="c"
-                    value={coefficients.c}
+                    defaultValue={coefficients.c}
                     onChange={handleChange}
                     className="w-16 border p-1 rounded text-black"
                   />
