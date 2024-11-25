@@ -40,13 +40,13 @@ export default function MacamMacamFungsi() {
         <Link href={"/learn/fungsi"}>
           <div>
             <p className="text-sm ms-6">Kembali</p>
-            <h3 className="text-xl text-white font-medium"><span className="text-2xl me-2">&lt;</span> Apa itu fungsi?</h3>
+            <h3 className="text-base md:text-xl text-white font-medium"><span className="text-xl">&lt;</span> Apa itu fungsi?</h3>
           </div>
         </Link>
         <Link href={"/learn/fungsi-kuadrat"}>
           <div>
             <p className="text-sm">Selanjutnya</p>
-            <h3 className="text-xl text-white font-medium">Fungsi kuadrat <span className="text-2xl ms-2">&gt;</span></h3>
+            <h3 className="text-base md:text-xl text-white font-medium">Fungsi kuadrat <span className="text-xl">&gt;</span></h3>
           </div>
         </Link>
       </div>

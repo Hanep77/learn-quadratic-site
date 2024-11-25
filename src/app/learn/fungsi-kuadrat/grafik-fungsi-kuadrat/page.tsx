@@ -56,13 +56,13 @@ export default function GrafikFungsiKuadrat() {
         <Link href={"/learn/fungsi-kuadrat"}>
           <div>
             <p className="text-sm ms-6">Kembali</p>
-            <h3 className="text-xl text-white font-medium"><span className="text-2xl me-2">&lt;</span> Fungsi kuadrat</h3>
+            <h3 className="text-base md:text-xl text-white font-medium"><span className="text-xl">&lt;</span> Fungsi kuadrat</h3>
           </div>
         </Link>
         <Link href={"/learn/fungsi-kuadrat/contoh-soal"}>
           <div>
             <p className="text-sm">Selanjutnya</p>
-            <h3 className="text-xl text-white font-medium">Contoh soal <span className="text-2xl ms-2">&gt;</span></h3>
+            <h3 className="text-base md:text-xl text-white font-medium">Contoh soal <span className="text-xl">&gt;</span></h3>
           </div>
         </Link>
       </div>
