@@ -22,7 +22,7 @@ export default function Navbar() {
     <header className={`px-4 lg:px-0 fixed top-0 left-0 right-0 h-16 bg-[rgba(28,3,50,.2)] ${sidebar && 'bg-[rgba(28,3,50,1)] border-none'} backdrop-blur border-b border-violet-700 z-30`}>
       <nav className="max-w-screen-lg h-full m-auto flex justify-between items-center">
         <img src="/logo.png" alt="logo" className="h-8" />
-        <div className={`fixed md:static bg-[rgba(28,3,50,1)] min-h-screen md:bg-transparent z-50 inset-0 mt-16 pt-4 md:pt-0 md:mt-0 ${!sidebar && 'translate-x-full'} transition md:translate-x-0 flex`}>
+        <div className={`fixed md:static md:min-h-0 bg-[rgba(28,3,50,1)] min-h-screen md:bg-transparent z-50 inset-0 mt-16 pt-4 md:pt-0 md:mt-0 ${!sidebar && 'translate-x-full'} transition md:translate-x-0 flex`}>
           <ul className="md:flex md:gap-1 flex flex-col md:flex-row items-center gap-5 text-lg font-medium px-4 md:px-0 w-full">
             <li><Link href={"/home"} onClick={closeSidebar} className={`py-1 px-2 rounded-md ${pathname == "home" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Beranda</Link></li>
             <li><Link href={"/learn"} onClick={closeSidebar} className={`py-1 px-2 rounded-md ${pathname == "learn" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Materi</Link></li>
