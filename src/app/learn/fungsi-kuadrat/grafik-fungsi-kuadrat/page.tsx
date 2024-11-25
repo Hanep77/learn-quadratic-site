@@ -46,9 +46,16 @@ export default function GrafikFungsiKuadrat() {
                 <MathJax className="text-white">{"\\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\)"}</MathJax>
               </div>
               <p>
-                Di mana <span className="inline-block"><MathJax className="text-white">{"\\(\\Delta = b^2 - 4ac\\)"}</MathJax></span> disebut diskriminan.
+                Di mana <span className="inline-block"><MathJax className="text-white  border border-violet-700 shadow-white inline-block p-3 rounded">{"\\(\\Delta = b^2 - 4ac\\)"}</MathJax></span> disebut <span className="text-white font-medium"> diskriminan</span>.
               </p>
             </li>
+          </ul>
+        </li>
+        <li><span className="text-white font-medium">Diskriminan menentukan sifat akar-akar dari fungsi kuadrat:</span>
+          <ul className="list-disc ms-10 mb-4">
+            <li>Jika <MathJax inline className="text-white font-medium">{"\\(\\Delta > 0 \\)"}</MathJax>, fungsi kuadrat memiliki dua akar real yang berbeda.</li>
+            <li>Jika <MathJax inline className="text-white font-medium">{"\\(\\Delta = 0 \\)"}</MathJax>, fungsi kuadrat memiliki satu akar real (akar kembar).</li>
+            <li>Jika <MathJax inline className="text-white font-medium">{"\\(\\Delta < 0 \\)"}</MathJax>, fungsi kuadrat tidak memiliki akar real, melainkan memiliki dua akar imajiner.</li>
           </ul>
         </li>
       </ul>
