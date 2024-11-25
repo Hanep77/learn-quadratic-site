@@ -92,10 +92,15 @@ export default function Calculator() {
                     xaxis: { title: "x" },
                     yaxis: { title: "f(x)" },
                     boxmode: "overlay",
+                    modebar: {
+                      activecolor: "green",
+                      orientation: "v",
+                    }
                   }}
                   config={{
                     displaylogo: false,
                     showTips: true,
+                    doubleClick: "autosize",
                     toImageButtonOptions: {
                       format: "png",
                       filename: "quadratic_function_graph",
