@@ -7,7 +7,7 @@ export default function Team() {
         <div className="max-w-screen-lg m-auto pt-56 pb-8 flex flex-col items-center sm:items-stretch sm:flex-row justify-center gap-44 sm:gap-8">
           <div className="bg-violet-900 p-1 rounded w-72 sm:w-60 ">
             <div className="bg-slate-300 h-52 sm:h-36 relative flex justify-center rounded-t">
-              <Image src={"/yudis.png"} alt="yudis" width={700} height={700} className="absolute -top-[138px] sm:-top-[87px] w-72 sm:w-48" />
+              <Image src={"/yudis.png"} alt="yudis" width={700} height={700} className="absolute -top-[128px] sm:-top-[87px] w-72 sm:w-48" />
             </div>
             <div className="p-2 text-center">
               <h5 className="text-lg font-medium">Yudis Sutisna</h5>
