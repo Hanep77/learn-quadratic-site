@@ -9,9 +9,6 @@ export default function Learn() {
       <h2 className="text-3xl font-semibold mb-2 text-white">Pendahuluan</h2>
       <div className="text-justify mb-8">
         <p className="mb-2">
-          Website ini dibuat sebagai media pembelajaran digital tentang fungsi, khususnya fungsi kuadrat. Website ini juga sebagai salah satu syarat pemenuhan tugas UAS mata kuliah kalkulus I. Web ini menyediakan materi pembelajaran dan kalkulator grafik yang dapat memvisualisasikan bentuk dari fungsi. Selain itu terdapat juga quiz yang dapat pengguna selesaikan untuk menguji hasil pembelajaran.
-        </p>
-        <p className="mb-2">
           Matematika merupakan fondasi dari berbagai bidang ilmu, baik di sains, teknologi, ekonomi, maupun teknik. Salah satu cabang penting dalam matematika adalah fungsi, yang menjadi konsep dasar dalam memahami hubungan antara dua himpunan. Dalam kehidupan sehari-hari, fungsi sering digunakan untuk memodelkan berbagai fenomena seperti pergerakan benda, pertumbuhan populasi, hingga perubahan suhu.
         </p>
         <p className="mb-2">
