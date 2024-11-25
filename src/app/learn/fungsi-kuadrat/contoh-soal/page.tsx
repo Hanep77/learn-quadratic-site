@@ -25,7 +25,14 @@ export default function ContohSoal() {
           <li>
             <p className="mb-2">Koordinat titik puncak:</p>
             <div className="mb-2 font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
-              <MathJax>{"\\(f(1) = 2(1)^2 - 4(1) + 1 = 2 - 4 + 1 = -1\\)"}</MathJax>
+              <div className="flex flex-row">
+                <MathJax>{"\\(f(1)\\)"}</MathJax>
+                <div className="flex flex-col ml-1">
+                  <MathJax>{"\\(= 2(1)^2 - 4(1) + 1\\)"}</MathJax>
+                  <MathJax>{"\\(= 2 - 4 + 1 = -1\\)"}</MathJax>
+                  <MathJax>{"\\(= -1\\)"}</MathJax>
+                </div>
+              </div>
               <p className="font-light text-violet-400">
                 jadi titik puncaknya adalah <MathJax inline className="text-white">{"\\((1, -1)\\)"}</MathJax>
               </p>
@@ -34,7 +41,14 @@ export default function ContohSoal() {
           <li>
             <p className="mb-2">Diskriminan:</p>
             <div className="mb-2 font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
-              <MathJax>{"\\(\\Delta = (-4)^2 - 4(2)(1) = 16 - 8 = 8\\)"}</MathJax>
+              <div className="flex flex-row">
+                <MathJax>{"\\(\\Delta\\)"}</MathJax>
+                <div className="flex flex-col ml-1">
+                  <MathJax>{"\\(= (-4)^2 - 4(2)(1)\\)"}</MathJax>
+                  <MathJax>{"\\(= 16 - 8\\)"}</MathJax>
+                  <MathJax>{"\\(= 8\\)"}</MathJax>
+                </div>
+              </div>
             </div>
           </li>
         </ul>
