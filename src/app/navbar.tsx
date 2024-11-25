@@ -27,8 +27,8 @@ export default function Navbar() {
             <li><Link href={"/home"} onClick={closeSidebar} className={`py-1 px-2 rounded-md ${pathname == "home" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Beranda</Link></li>
             <li><Link href={"/learn"} onClick={closeSidebar} className={`py-1 px-2 rounded-md ${pathname == "learn" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Materi</Link></li>
             <li><Link href={"/calculator"} onClick={closeSidebar} className={`py-1 px-2 rounded-md ${pathname == "calculator" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Kalkulator</Link></li>
-            <li><Link href={"/quiz"} onClick={closeSidebar} className={`py-1 px-2 rounded-md ${pathname == "quiz" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Quiz</Link></li>
-            <li><Link href={"/team"} onClick={closeSidebar} className={`block md:hidden py-1 px-2 rounded-md ${pathname == "quiz" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Tim Kami</Link></li>
+            <li><Link href={"/quiz"} onClick={closeSidebar} className={`py-1 px-2 rounded-md ${pathname == "quiz" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Kuis</Link></li>
+            <li><Link href={"/team"} onClick={closeSidebar} className={`block md:hidden py-1 px-2 rounded-md ${pathname == "team" ? "text-violet-900 bg-white" : "hover:text-violet-900 hover:bg-white"}`}>Tim Kami</Link></li>
           </ul>
         </div>
 
