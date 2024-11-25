@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <section className="min-h-screen">
         <div className="min-h-screen px-4 lg:px-0"
-          style={{ background: "linear-gradient(rgba(128,21,174,0.5), rgba(28,3,50,1)), url(/graph-paper.svg)" }}>
+          style={{ background: "linear-gradient(rgba(28,3,50,.7), rgba(28,3,50,1)), url(/graph-paper.svg)" }}>
           <div className="min-h-screen flex justify-center items-center">
             <div className="text-center max-w-screen-md bg-[rgba(250,250,250,.1)] p-5 py-12 rounded-md backdrop-blur-[2px]">
               <h1 className="text-3xl md:text-5xl font-bold mb-5">
@@ -26,11 +26,42 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="min-h-screen bg-[rgba(28,3,50,1)] px-4 lg:px-0 flex flex-col justify-center items-center" id="more">
+
+      <section className="min-h-screen flex flex-col justify-center items-center">
+        <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">Sekilas tentang <span className="text-green-500">website </span>ini</h1>
+        <div className="text-justify max-w-screen-lg px-4 md:px-0">
+          <div className="flex flex-col sm:flex-row mb-5">
+            <div className="sm:w-1/2 flex justify-center mb-5 md:mb-0">
+              <Image src={"/GeoGebra-fuer-interaktive-Tafelaufgaben.svg"} alt="belajar" width={500} height={500} className="w-96 border-s-2 border-t-2 p-2" />
+            </div>
+            <div className="sm:w-1/2 flex items-center">
+              <div className="bg-[rgba(250,250,250,.1)] p-5 text-lg rounded backdrop-blur-[2px]">
+                <p className="mb-2">
+                  Website ini dibuat sebagai media pembelajaran digital tentang fungsi, khususnya fungsi kuadrat. Website ini juga sebagai salah satu syarat pemenuhan tugas UAS mata kuliah kalkulus I.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row">
+            <div className="sm:w-2/3 flex items-center">
+              <div className="bg-[rgba(250,250,250,.1)] p-5 text-lg rounded">
+                <p className="mb-2">
+                  Web ini menyediakan materi pembelajaran dan kalkulator grafik yang dapat memvisualisasikan bentuk dari fungsi. Selain itu terdapat juga quiz yang dapat pengguna selesaikan untuk menguji hasil pembelajaran.
+                </p>
+              </div>
+            </div>
+            <div className="sm:flex-grow flex justify-center my-5 md:my-0">
+              <Image src={"/Gruppenarbeit-mit-GeoGebra.svg"} alt="belajar" width={500} height={500} className="w-60 border-b-2 border-e-2 p-2" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-screen px-4 pt-12 md:pt-0 lg:px-0 flex flex-col justify-center items-center" id="more" style={{ background: "linear-gradient(rgba(28,3,50,1), rgba(28,3,50,.7)), url(graph-paper.svg)" }}>
         <div className="text-justify max-w-screen-md">
           <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">Apa itu <span className="text-green-500">fungsi kuadrat</span>?</h1>
-          <div className="text-lg text-violet-300 flex flex-col md:flex-row gap-5">
-            <div>
+          <div className="text-lg text-violet-200 flex flex-col md:flex-row gap-5">
+            <div className="bg-[rgba(250,250,250,.1)] p-5 backdrop-blur-[2px] rounded">
               <p className="mb-2">
                 Fungsi kuadrat adalah sebuah fungsi matematika di mana variabel bebasnya hanya memiliki pangkat paling tinggi dua. Bentuk umumnya adalah:
               </p>
