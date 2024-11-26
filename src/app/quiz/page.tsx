@@ -11,6 +11,7 @@ export default function Quiz() {
   const [dataDefault, setDataDefault] = useState<Question[]>([]);
   const [isDone, setIsDone] = useState<boolean>(false);
   const [currentQuestion, setCurrentQuestion] = useState<number>(0)
+  const [isAnswerNull, setAnswerIsNull] = useState<boolean>(false);
 
   useEffect(() => {
     fetch('/api/quiz')
@@ -34,6 +35,11 @@ export default function Quiz() {
   }
 
   const nextQuestion = () => {
+    if (!data[currentQuestion].userAnswer) {
+      setAnswerIsNull(true);
+      return;
+    }
+    setAnswerIsNull(false);
     if (currentQuestion >= 9) {
       handleQuizDone();
       return
@@ -77,6 +83,7 @@ export default function Quiz() {
     <div className="flex justify-center items-center bg-[rgba(28,3,50,1)] min-h-screen max-w-screen">
       <div className="px-4 md:px-0">
         <h4 className="font-medium mb-2 text-center">{data[currentQuestion].no}/10</h4>
+        {isAnswerNull ? <div className="bg-red-700 border-red-600 bg-opacity-30 p-4 mb-4 rounded">Jawaban tidak boleh kosong!!!</div> : null}
         <QuizBox currentQuestion={data[currentQuestion]} nextQuestion={nextQuestion} storeAnswer={storeAnswer} />
       </div>
     </div>
