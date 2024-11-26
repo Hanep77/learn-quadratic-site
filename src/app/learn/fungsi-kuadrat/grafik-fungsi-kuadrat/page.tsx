@@ -39,7 +39,13 @@ export default function GrafikFungsiKuadrat() {
             <span className="text-white font-medium">Titik Potong dengan Sumbu X (X-intercept):</span> Titik di mana grafik memotong sumbu x diperoleh dengan mencari akar-akar (solusi) dari persamaan kuadrat <span className="inline-block"><MathJax className="text-white">{"\\(ax^2 + bx + c = 0\\)"}</MathJax></span>. Akar-akar ini bisa dicari dengan:
           </p>
           <ul className="list-disc ms-10 mb-4">
-            <li>Memfaktorkan (jika memungkinkan),</li>
+            <li>
+              <p>Memfaktorkan (jika memungkinkan):</p>
+              <p>
+                Fungsi kuadrat juga bisa difaktorkan jika diskriminannya merupakan bilangan kuadrat sempurna. Misalnya, untuk fungsi kuadrat <MathJax inline className="text-white">{"\\(ax^2 + bx + c\\)"}</MathJax>, jika ada dua bilangan <MathJax inline className="text-white">{"\\(p\\)"}</MathJax> dan <MathJax inline className="text-white">{"\\(q\\)"}</MathJax> yang memenuhi persamaan <MathJax inline className="text-white">{"\\(pq = ac\\)"}</MathJax> dan <MathJax inline className="text-white">{"\\(p + q = b\\)"}</MathJax>, maka persamaan tersebut dapat difaktorkan menjadi: <MathJax inline className="text-white">{"\\(f(x) = a(x - x_1)(x - x_2)\\)"}</MathJax>
+                di mana <MathJax inline className="text-white">{"\\(x_1\\)"}</MathJax> dan <MathJax inline className="text-white">{"\\(x_2\\)"}</MathJax> adalah akar-akar dari fungsi kuadrat.
+              </p>
+            </li>
             <li>
               <p className="mb-2">Menggunakan Rumus Kuadrat:</p>
               <div className="mb-2 font-medium text-white border border-violet-700 shadow-white inline-block p-3 rounded">
