@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { evaluate, sqrt } from "mathjs";
 import "../globals.css";
-import { Annotations, Layout } from "plotly.js";
+import { Layout } from "plotly.js";
 
 const MathJax = dynamic(() => import("better-react-mathjax").then(mod => mod.MathJax), {
   ssr: false,
