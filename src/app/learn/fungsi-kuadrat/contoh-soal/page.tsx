@@ -12,8 +12,10 @@ export default function ContohSoal() {
       <h2 className="text-3xl font-semibold mb-2 text-white">Contoh soal dan penyelesaiannya</h2>
       <div className="mb-4">
         <p>
-          <span className="text-white font-medium">Contoh 1: </span>Menentukan Sumbu Simetri, Puncak, dan Diskriminan
-          Diberikan fungsi kuadrat <MathJax inline className="text-white">{"\\(f(x) = 2x^2 - 4x + 1\\)"}</MathJax>. Tentukan sumbu simetri, titik puncak, dan diskriminannya.
+          <span className="text-white font-medium">Contoh 1: Menentukan Sumbu Simetri, Puncak, dan Diskriminan </span>
+        </p>
+        <p>
+          Diberikan fungsi kuadrat <MathJax inline className="text-white">{"\\(f(x) = 2x^2 - 4x + 1\\)"}</MathJax>. Tentukan sumbu simetri, titik puncak, dan diskriminannya!.
         </p>
         <ul className="list-disc ms-10 mb-4">
           <li>
@@ -55,8 +57,10 @@ export default function ContohSoal() {
       </div>
       <div className="mb-8">
         <p>
-          <span className="text-white font-medium mb-2">Contoh 2: </span>Menyelesaikan dengan Rumus Kuadrat
-          Selesaikan persamaan kuadrat <MathJax inline className="text-white">{"\\(3x^2 - 6x + 2 = 0\\)"}</MathJax>.
+          <span className="text-white font-medium mb-2">Contoh 2: Menyelesaikan dengan Rumus Kuadrat </span>
+        </p>
+        <p>
+          Selesaikan persamaan kuadrat <MathJax inline className="text-white">{"\\(3x^2 - 6x + 2 = 0\\)"}</MathJax> menggunakan rumus kuadarat ABC!.
         </p>
         <p className="mb-2">Gunakan rumus kuadrat:</p>
         <div className="ps-5 text-white font-medium flex flex-col gap-2">
