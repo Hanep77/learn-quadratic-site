@@ -32,16 +32,16 @@ export default function FungsiKuadrat() {
         <h3 className="text-xl font-medium text-white mb-2">Bagian-bagian Fungsi Kuadrat</h3>
         <ul className="list-disc ms-10 my-2">
           <li>
-            <span className="text-white font-medium">Koefisien a: </span>
+            <span className="text-white font-medium">Koefisien <MathJax inline className="text-white">{"\\(a\\)"}</MathJax>: </span>
             Koefisien dari <MathJax inline className="text-white">{"\\(x^2\\)"}</MathJax>, yang menentukan lebar dan arah parabola. Jika <MathJax inline className="text-white">{"\\(a > 0\\)"}</MathJax>, parabola terbuka ke atas, dan jika <MathJax inline className="text-white">{"\\(a < 0\\)"}</MathJax>, parabola terbuka ke bawah.
           </li>
           <li>
-            <span className="text-white font-medium">Koefisien b: </span>
+            <span className="text-white font-medium">Koefisien <MathJax inline className="text-white">{"\\(b\\)"}</MathJax>: </span>
             Koefisien dari <MathJax inline className="text-white">{"\\(x\\)"}</MathJax>, yang mempengaruhi posisi sumbu simetri parabola.
           </li>
           <li>
-            <span className="text-white font-medium">Konstanta c: </span>
-            Menentukan titik potong dengan sumbu y (<em>y-intercept</em>).
+            <span className="text-white font-medium">Konstanta <MathJax inline className="text-white">{"\\(c\\)"}</MathJax>: </span>
+            Menentukan titik potong dengan sumbu <MathJax inline className="text-white">{"\\(y\\)"}</MathJax> <MathJax inline className="text-white">{"\\((y-intercept)\\)"}</MathJax>.
           </li>
         </ul>
       </div>
