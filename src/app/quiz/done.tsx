@@ -32,7 +32,7 @@ export default function Done({ data, resetQuiz }: { data: Question[], resetQuiz:
                   )
                 })}
               </div>
-              <div className="mt-2">
+              <div className="mt-2 border border-violet-700 rounded p-2 md:p-4 overflow-auto break-words">
                 <h3>Pembahasan:</h3>
                 <MathJax inline>{question.solution}</MathJax>
               </div>
