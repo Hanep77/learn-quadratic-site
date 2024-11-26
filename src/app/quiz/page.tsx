@@ -35,7 +35,7 @@ export default function Quiz() {
   }
 
   const nextQuestion = () => {
-    if (!data[currentQuestion].userAnswer) {
+    if (data[currentQuestion].userAnswer == null) {
       setAnswerIsNull(true);
       return;
     }
