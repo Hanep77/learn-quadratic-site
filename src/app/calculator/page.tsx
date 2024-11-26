@@ -210,7 +210,7 @@ export default function Calculator() {
       annotations.push(vertex);
       const disc = getDiscriminant(a, b, c);
       const xRoots = getSqrt(a, b, c, disc);
-      if (xRoots.rootsData.length > 0) {
+      if (disc > 0) {
         annotations.push(...xRoots.rootsData);
         data.push(...xRoots.graphData);
       }
