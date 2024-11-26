@@ -32,8 +32,8 @@ export default function Done({ data, resetQuiz }: { data: Question[], resetQuiz:
                   )
                 })}
               </div>
-              <div className="solution mt-2">
-                <h3>Solusi:</h3>
+              <div className="mt-2">
+                <h3>Pembahasan:</h3>
                 <MathJax inline>{question.solution}</MathJax>
               </div>
             </div>
