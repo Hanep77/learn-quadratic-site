@@ -56,7 +56,7 @@ export default function Fungsi() {
         <Link href={"/learn/pengantar/prerequisit"}>
           <div>
             <p className="text-sm ms-6">Kembali</p>
-            <h3 className="text-base md:text-xl text-white font-medium"><span className="text-xl">&lt;</span> Pre-requisit</h3>
+            <h3 className="text-base md:text-xl text-white font-medium"><span className="text-xl">&lt;</span> Prasyarat</h3>
           </div>
         </Link>
         <Link href={"/learn/fungsi/macam-macam-fungsi"}>

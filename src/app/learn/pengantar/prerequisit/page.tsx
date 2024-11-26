@@ -4,9 +4,9 @@ import Breadcrumbs from "../../breadcrumbs";
 export default function Learn() {
   return (
     <>
-      <Breadcrumbs chapter="Pengantar" title="Pre-requisites" />
+      <Breadcrumbs chapter="Pengantar" title="Prasyarat" />
       <h4 className="text-lg font-semibold text-green-400 mb-2">Pengantar</h4>
-      <h2 className="text-3xl font-semibold mb-2 text-white">Pre-requisites</h2>
+      <h2 className="text-3xl font-semibold mb-2 text-white">Prasyarat</h2>
       <p>Sebelum mempelajari fungsi dan fungsi kuadrat, ada beberapa konsep dasar yang perlu dikuasai terlebih dahulu yaitu:</p>
       <ol className="list-decimal ms-10 mt-2 mb-8">
         <li>Konsep Dasar Matematika

@@ -21,7 +21,7 @@ export default function Learn() {
         <Link href={"/learn/pengantar/prerequisit"}>
           <div>
             <p className="text-sm">Selanjutnya</p>
-            <h3 className="text-base md:text-xl text-white font-medium">Pre-requisit <span className="text-xl">&gt;</span></h3>
+            <h3 className="text-base md:text-xl text-white font-medium">Prasyarat <span className="text-xl">&gt;</span></h3>
           </div>
         </Link>
       </div>
