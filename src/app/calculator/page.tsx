@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import { evaluate } from "mathjs";
+import { evaluate, sqrt } from "mathjs";
 import "../globals.css";
-import { Layout } from "plotly.js";
+import { Annotations, Layout } from "plotly.js";
 
 const MathJax = dynamic(() => import("better-react-mathjax").then(mod => mod.MathJax), {
   ssr: false,
@@ -23,6 +23,107 @@ type GraphData = {
   marker: { color: string; size?: number };
   name: string;
 };
+
+type AnnData = {
+  x: number,
+  y: number,
+  text: string,
+  clicktoshow: "onoff",
+  showarrow: true,
+  arrowhead: 2,
+  ax: 0,
+  ay: -30,
+  font: {
+    size: 12,
+    color: string,
+  },
+  arrowcolor: "black",
+  valign: "top" | "bottom" | "middle",
+  bgcolor: "rgba(28,3,50,0.8)",
+  bordercolor: "white",
+  borderpad: 4,
+  borderwidth: 1,
+}
+
+const getDiscriminant = (a: number, b: number, c: number) => {
+  const result = b * b - 4 * a * c;
+  return result;
+}
+
+const getSqrt = (a: number, b: number, c: number, d: number) => {
+  const graphData: GraphData[] = [];
+  const rootsData: AnnData[] = [];
+  if (d > 0) {
+    const x1 = (-b + (sqrt(d) as number)) / (2 * a);
+    const x2 = (-b - (sqrt(d) as number)) / (2 * a);
+
+    const d1: AnnData = {
+      x: x1,
+      y: 0,
+      text: `(${x1.toFixed(2)}, ${0})`,
+      clicktoshow: "onoff",
+      showarrow: true,
+      arrowhead: 2,
+      ax: 0,
+      ay: -30,
+      font: {
+        size: 12,
+        color: "white",
+      },
+      valign: "bottom",
+      arrowcolor: "black",
+      bgcolor: "rgba(28,3,50,0.8)",
+      bordercolor: "white",
+      borderpad: 4,
+      borderwidth: 1,
+    };
+
+    const d2: AnnData = {
+      x: x2,
+      y: 0,
+      text: `(${x2.toFixed(2)}, ${0})`,
+      clicktoshow: "onoff",
+      showarrow: true,
+      arrowhead: 2,
+      ax: 0,
+      ay: -30,
+      font: {
+        size: 12,
+        color: "white",
+      },
+      valign: "bottom",
+      arrowcolor: "black",
+      bgcolor: "rgba(28,3,50,0.8)",
+      bordercolor: "white",
+      borderpad: 4,
+      borderwidth: 1,
+    };
+
+    rootsData.push(d1, d2);
+    graphData.push({
+      x: [x1],
+      y: [0],
+      type: "scatter",
+      mode: "markers",
+      marker: { color: "yellow", size: 10 },
+      name: "x1",
+    },
+      {
+        x: [x2],
+        y: [0],
+        type: "scatter",
+        mode: "markers",
+        marker: { color: "blue", size: 10 },
+        name: "x2",
+      },
+    );
+  }
+
+  return {
+    graphData,
+    rootsData,
+  };
+}
 
 export default function Calculator() {
   const [coefficients, setCoefficients] = useState<{ a: number; b: number; c: number }>({
@@ -64,6 +165,7 @@ export default function Calculator() {
       const xVertex = -b / (2 * a);
       const yVertex = evaluate(`${a} * x^2 + ${b} * x + ${c}`, { x: xVertex });
 
+      const annotations: AnnData[] = [];
       const data: GraphData[] = [
         {
           x: xValues,
@@ -83,30 +185,39 @@ export default function Calculator() {
         },
       ];
 
+      const vertex: AnnData =
+      {
+        x: xVertex,
+        y: yVertex,
+        text: `(${xVertex.toFixed(2)}, ${yVertex.toFixed(2)})`,
+        clicktoshow: "onoff",
+        showarrow: true,
+        arrowhead: 2,
+        ax: 0,
+        ay: -30,
+        font: {
+          size: 12,
+          color: "white",
+        },
+        valign: "top",
+        arrowcolor: "black",
+        bgcolor: "rgba(28,3,50,0.8)",
+        bordercolor: "white",
+        borderpad: 4,
+        borderwidth: 1,
+      };
+
+      annotations.push(vertex);
+      const disc = getDiscriminant(a, b, c);
+      const xRoots = getSqrt(a, b, c, disc);
+      if (xRoots.rootsData.length > 0) {
+        annotations.push(...xRoots.rootsData);
+        data.push(...xRoots.graphData);
+      }
+
       setLayout({
         ...layout,
-        annotations: [
-          {
-            x: xVertex,
-            y: yVertex,
-            text: `Vertex: (${xVertex}, ${yVertex})`,
-            clicktoshow: "onout",
-            showarrow: true,
-            arrowhead: 2,
-            ax: 0,
-            ay: -30,
-            font: {
-              size: 12,
-              color: "white",
-            },
-            arrowcolor: "black",
-            align: "center",
-            bgcolor: "rgba(28,3,50,0.8)",
-            bordercolor: "white",
-            borderpad: 4,
-            borderwidth: 1,
-          },
-        ],
+        annotations,
       });
 
       setGraphData(data);
