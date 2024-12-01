@@ -22,7 +22,7 @@ export default function Team() {
             <div className="p-2 text-center">
               <h5 className="text-lg font-medium">Adi M. Yasir</h5>
               <p className="text-sm">Developer &amp; Penyusun Materi</p>
-              <p className="italic text-violet-300">&quot;Bekerja dengan hati, dan kadang-kadang dengan Google.&quot;</p>
+              <p className="italic text-violet-300">&quot;Bekerja dengan hati, kadang dengan AI.&quot;</p>
             </div>
           </div>
           <div className="bg-violet-900 p-1 rounded w-72 sm:w-60">
