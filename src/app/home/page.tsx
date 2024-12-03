@@ -16,8 +16,7 @@ export default function Home() {
                 Selamat Datang di <span className="text-green-500">Platform Pembelajaran</span> kami!
               </h1>
               <div className="max-w-[570px] m-auto">
-                <p className="text-lg md:text-xl text-violet-300 font-light">Gabung Sekarang dan Rasakan Serunya Belajar Kalkulus
-                  dengan Pendekatan Visual dan Mudah dipahami !!</p>
+                <p className="text-lg md:text-xl text-violet-300 font-light">Rasakan Serunya Belajar Fungsi Kuadrat yang Mudah dipahami !!</p>
               </div>
               <div className="mt-5 flex justify-center">
                 <Link href={'#more'} className="px-5 py-2 border border-violet-300 hover:bg-violet-200 hover:text-violet-950 active:bg-violet-100 rounded-full">Lihat Lebih Banyak</Link>
