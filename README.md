@@ -7,18 +7,12 @@ Selamat datang di **Learn Quadratic** – platform pembelajaran interaktif tenta
 - **Materi Pembelajaran**: Penjelasan lengkap dan terstruktur tentang fungsi kuadrat.
 - **Kalkulator Grafik**: Visualisasi bentuk grafik fungsi kuadrat berdasarkan input pengguna.
 - **Kuis Interaktif**: Uji pemahaman melalui soal-soal kuis yang disediakan.
-- **Tim Kami**: Mengenal pembuat website ini.
-
-## Tentang Fungsi Kuadrat
-Fungsi kuadrat adalah fungsi matematika dengan bentuk umum:  
-\[ f(x) = ax^2 + bx + c \]  
-di mana \( a \neq 0 \).
 
 ## Teknologi yang Digunakan
 
 - **Framework**: Next.js
 - **Hosting**: Vercel
-- **Bahasa Pemrograman**: JavaScript/TypeScript
+- **Bahasa Pemrograman**: TypeScript
 - **UI Framework**: Tailwind CSS
 
 ## Cara Mengakses
@@ -29,4 +23,4 @@ Proyek ini dibuat oleh **Kelompok 1 Kelas B** untuk memenuhi tugas UAS mata kuli
 
 ---
 
-Jika ada hal lain yang perlu disesuaikan, beri tahu saya! 😊
+Jika ada hal lain yang perlu disesuaikan, beri tahu kami! 😊
