@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learn Quadratic
 
-## Getting Started
+Selamat datang di **Learn Quadratic** – platform pembelajaran interaktif tentang fungsi kuadrat! Website ini dirancang sebagai media pembelajaran digital yang memudahkan pengguna memahami konsep fungsi kuadrat dengan berbagai fitur menarik.
 
-First, run the development server:
+## Fitur Utama
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Materi Pembelajaran**: Penjelasan lengkap dan terstruktur tentang fungsi kuadrat.
+- **Kalkulator Grafik**: Visualisasi bentuk grafik fungsi kuadrat berdasarkan input pengguna.
+- **Kuis Interaktif**: Uji pemahaman melalui soal-soal kuis yang disediakan.
+- **Tim Kami**: Mengenal pembuat website ini.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tentang Fungsi Kuadrat
+Fungsi kuadrat adalah fungsi matematika dengan bentuk umum:  
+\[ f(x) = ax^2 + bx + c \]  
+di mana \( a \neq 0 \).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Teknologi yang Digunakan
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js
+- **Hosting**: Vercel
+- **Bahasa Pemrograman**: JavaScript/TypeScript
+- **UI Framework**: Tailwind CSS
 
-## Learn More
+## Cara Mengakses
+Kunjungi [Learn Quadratic](https://learn-quadratic.vercel.app) untuk memulai pembelajaran Anda.
 
-To learn more about Next.js, take a look at the following resources:
+## Kontribusi
+Proyek ini dibuat oleh **Kelompok 1 Kelas B** untuk memenuhi tugas UAS mata kuliah Kalkulus I.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Jika ada hal lain yang perlu disesuaikan, beri tahu saya! 😊
